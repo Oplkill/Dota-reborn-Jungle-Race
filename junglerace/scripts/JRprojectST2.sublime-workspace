@@ -1,0 +1,1461 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"apply",
+				"ApplyDataDrivenModifier"
+			],
+			[
+				"GetPl",
+				"GetPlayerID"
+			],
+			[
+				"conne",
+				"GetConnectionState"
+			],
+			[
+				"play",
+				"PlayerResource"
+			],
+			[
+				"G",
+				"GatherCriteria"
+			],
+			[
+				"Remo",
+				"RemoveAbility	Remove an ability from this unit by name."
+			],
+			[
+				"abil",
+				"abilList"
+			],
+			[
+				"abi",
+				"abilities"
+			],
+			[
+				"h",
+				"heroname"
+			],
+			[
+				"hero",
+				"heroentindex"
+			],
+			[
+				"pl",
+				"players"
+			],
+			[
+				"ki",
+				"killedUnit"
+			],
+			[
+				"p",
+				"plId"
+			],
+			[
+				"fun",
+				"function	function"
+			],
+			[
+				"tea",
+				"teamicon"
+			],
+			[
+				"pla",
+				"playing"
+			],
+			[
+				"team",
+				"teamid"
+			],
+			[
+				"pan",
+				"Panel"
+			],
+			[
+				"align",
+				"vertical-align"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"Cha",
+				"ChangePlaylist"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/custom_ui_manifest.xml",
+			"settings":
+			{
+				"buffer_size": 5200,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vscripts/junglerace/jr_globals.lua",
+			"settings":
+			{
+				"buffer_size": 1007,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vscripts/abilities/spellstealer.lua",
+			"settings":
+			{
+				"buffer_size": 1991,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "npc/npc_units_custom.txt",
+			"settings":
+			{
+				"buffer_size": 111153,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vscripts/abilities/doom.lua",
+			"settings":
+			{
+				"buffer_size": 1288,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/oplkill/Desktop/scripts/npc/npc_abilities_custom.txt",
+			"settings":
+			{
+				"buffer_size": 879940,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/oplkill/Desktop/scripts/npc/npc_heroes_custom.txt",
+			"settings":
+			{
+				"buffer_size": 13316,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/oplkill/Desktop/npc/npc_units_custom.txt",
+			"settings":
+			{
+				"buffer_size": 76674,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/oplkill/Desktop/scripts/vscripts/dungeons.lua",
+			"settings":
+			{
+				"buffer_size": 82150,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/oplkill/Desktop/scripts/vscripts/internal/gamemode.lua",
+			"settings":
+			{
+				"buffer_size": 11146,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vscripts/events.lua",
+			"settings":
+			{
+				"buffer_size": 10942,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vscripts/junglerace/jr_player_dis_connect.lua",
+			"settings":
+			{
+				"buffer_size": 1046,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/oplkill/Desktop/scripts/vscripts/events.lua",
+			"settings":
+			{
+				"buffer_size": 117767,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vscripts/junglerace/jr_create_units.lua",
+			"settings":
+			{
+				"buffer_size": 1656,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "npc/npc_heroes_custom.txt",
+			"settings":
+			{
+				"buffer_size": 370,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vscripts/junglerace/jr_init.lua",
+			"settings":
+			{
+				"buffer_size": 3606,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vscripts/junglerace/jr_start_game.lua",
+			"settings":
+			{
+				"buffer_size": 4456,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "npc/npc_abilities_custom.txt",
+			"settings":
+			{
+				"buffer_size": 77947,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vscripts/abilities/killall.lua",
+			"settings":
+			{
+				"buffer_size": 1108,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vscripts/abilities/holy_cone.lua",
+			"settings":
+			{
+				"buffer_size": 2633,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vscripts/wallphysics.lua",
+			"settings":
+			{
+				"buffer_size": 9433,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vscripts/abilities/leshrac_wall.lua",
+			"settings":
+			{
+				"buffer_size": 2360,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/oplkill/Desktop/scripts/vscripts/wallphysics.lua",
+			"settings":
+			{
+				"buffer_size": 9427,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vscripts/junglerace/jr_enter_end_laps_zones.lua",
+			"settings":
+			{
+				"buffer_size": 1324,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vscripts/junglerace/jr_death.lua",
+			"settings":
+			{
+				"buffer_size": 1119,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/custom_loading_screen.xml",
+			"settings":
+			{
+				"buffer_size": 470,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"last_filter": "install package",
+		"selected_items":
+		[
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"do",
+				"Set Syntax: Dota 2 KV"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/npc",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/abilities",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/junglerace"
+	],
+	"file_history":
+	[
+		"/C/Users/oplkill/Desktop/scripts/vscripts/gamemode.lua",
+		"/C/Users/oplkill/Desktop/scripts/vscripts/addon_game_mode.lua",
+		"/C/Users/oplkill/Desktop/scripts/vscripts/internal/util.lua",
+		"/C/Users/oplkill/Desktop/scripts/vscripts/libraries/projectiles.lua",
+		"/C/Users/oplkill/Desktop/scripts/vscripts/libraries/physics.lua",
+		"/C/Users/oplkill/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/oplkill/Desktop/scripts/vscripts/internal/events.lua",
+		"/C/Users/oplkill/Desktop/scripts/vscripts/game_state.lua",
+		"/C/Users/Oplkill/Desktop/scripts/vscripts/saveload.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/roshipcheats/scripts/vscripts/saveload.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/roshipcheats/scripts/vscripts/items.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/roshipcheats/flashsource/statscollection.as",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/roshipcheats/scripts/vscripts/settings.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/roshipcheats/flashsource/statscollection.fla",
+		"/C/Users/Oplkill/Desktop/scripts/vscripts/addon_game_mode.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/styles/custom_game/custom_loading_screen.css",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/junglerace/jr_enter_end_laps_zones.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/junglerace/jr_create_units.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/junglerace/jr_add_abils.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/junglerace/jr_start_game.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/custom_ui_manifest.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/scripts.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/scripts/custom_game/goal_panel.js",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/scripts/custom_game/unit_selection.js",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/scripts/custom_game/heroes_panel.js",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/styles/custom_game/heroes_panel.css",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/heroes_panel.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/npc/npc_abilities_custom.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/abilities/killall.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/abilities/chronosphere.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/junglerace/jr_death.lua",
+		"/C/Users/Oplkill/Desktop/DotaMaps/SpellLibrary-master/game/scripts/vscripts/heroes/hero_life_stealer/infest.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/abilities/blur.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/abilities/spellstealer.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/abilities/minusregen.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/junglerace/jr_init.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/events.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/junglerace/jr_globals.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/styles/custom_game/heroes_picture_compiller.css",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/junglerace/jr_debug.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/abilities/dream_coil.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/npc/npc_units_custom.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/npc/herolist.txt",
+		"/C/Users/Oplkill/Desktop/DotaMaps/npc_heroes.txt",
+		"/C/Users/Oplkill/Desktop/DotaMaps/npc_abilities.txt",
+		"/C/Users/Oplkill/Desktop/DotaMaps/SpellLibrary-master/game/scripts/npc/npc_abilities_custom.txt",
+		"/C/Users/Oplkill/Desktop/umnikJR/npc_abilities_custom.txt",
+		"/C/Users/Oplkill/Desktop/umnikJR/npc_units_custom.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/heroes_picture_compiller.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/styles/custom_game/music_player.css",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/music_player.xml",
+		"/C/Users/Oplkill/Desktop/DotaMaps/Пригодится/last_word.lua",
+		"/C/Users/Oplkill/Desktop/umnikJR/npc_abilities_override.txt",
+		"/C/Users/Oplkill/Desktop/umnikJR/npc_heroes_custom.txt",
+		"/C/Users/Oplkill/Desktop/umnikJR/npc_items_custom.txt",
+		"/C/Users/Oplkill/Desktop/umnikJR/addon_game_mode.lua",
+		"/C/Users/Oplkill/Desktop/umnikJR/nether_swap.lua",
+		"/C/Users/Oplkill/Desktop/umnikJR/timers.lua",
+		"/C/Users/Oplkill/Desktop/umnikJR/tp2.lua",
+		"/C/Users/Oplkill/Desktop/umnikJR/tp.lua",
+		"/C/Users/Oplkill/Desktop/umnikJR/dota_functions.lua",
+		"/C/Users/Oplkill/Desktop/umnikJR/meat_hook.lua",
+		"/C/Users/Oplkill/Desktop/umnikJR/modifier_hider_aura.lua",
+		"/C/Users/Oplkill/Desktop/umnikJR/test_ability.lua",
+		"/C/Users/Oplkill/Desktop/umnikJR/utility_functions.lua",
+		"/C/Users/Oplkill/Desktop/umnikJR/abilities.lua",
+		"/c/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/junglerace/jr_enter_end_laps_zones.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/npc/npc_heroes_custom.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/addon_game_mode.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/gamemode.lua",
+		"/C/Users/Oplkill/Desktop/addon_game_mode.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/internal/util.lua",
+		"/C/Users/Oplkill/Documents/X-Hero-Siege/game/dota_addons/x_hero_siege/resource/addon_russia.txt",
+		"/C/Users/Oplkill/Documents/X-Hero-Siege/game/dota_addons/x_hero_siege/resource/addon_english.txt",
+		"/C/Users/Oplkill/Desktop/addon_english.txt",
+		"/C/Users/Oplkill/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Oplkill/Desktop/npc_units_custom.txt",
+		"/C/Users/Oplkill/Desktop/nw-dota2editor-master/deploy.sh",
+		"/C/Users/Oplkill/Desktop/nw-dota2editor-master/README.md",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/goal_panel.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/styles/custom_game/goal_panel.css",
+		"/C/Users/Oplkill/Desktop/DotaMaps/x_hero_siege-Beta/game/dota_addons/barebones/scripts/npc/npc_abilities_custom.txt",
+		"/C/Users/Oplkill/Desktop/DotaMaps/x_hero_siege-Beta/game/dota_addons/barebones/scripts/vscripts/addon_game_mode.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/internal/events.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/internal/gamemode.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/internal/eventtest.lua",
+		"/C/Users/Oplkill/Desktop/DotaMaps/Пригодится/abils.txt",
+		"/C/Users/Oplkill/Desktop/DotaMaps/Пригодится/blur.lua",
+		"/C/Users/Oplkill/Desktop/DotaMaps/x_hero_siege-Beta/game/dota_addons/barebones/scripts/npc/npc_heroes_custom.txt",
+		"/C/Users/Oplkill/Desktop/DotaMaps/x_hero_siege-Beta/game/dota_addons/barebones/scripts/npc/npc_units_custom.txt",
+		"/C/Users/Oplkill/Desktop/DotaMaps/x_hero_siege-Beta/game/dota_addons/barebones/scripts/npc/npc_abilities_override.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/junglerace/jr_player_dis_connect.lua",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Windows/System32/drivers/etc/lmhosts.sam",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/resource/addon_russian.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/resource/addon_english.txt",
+		"/C/Users/Oplkill/Desktop/abilities.lua",
+		"/C/Users/Oplkill/Desktop/DotaMaps/x_hero_siege-Beta/content/dota_addons/barebones/soundevents/game_sounds_custom.vsndevts",
+		"/C/Users/Oplkill/Desktop/DotaMaps/x_hero_siege-Beta/game/dota_addons/barebones/scripts/vscripts/gamemode.lua",
+		"/C/Users/Oplkill/Desktop/DotaMaps/x_hero_siege-Beta/game/dota_addons/barebones/scripts/vscripts/heroes/top_bosses/arthas.lua",
+		"/C/Users/Oplkill/Desktop/npc_heroes.txt",
+		"/C/Users/Oplkill/Desktop/npc_heroes_custom.txt",
+		"/C/Users/Oplkill/Desktop/LiA-master/game/dota_addons/life_in_arena/scripts/npc/npc_heroes_custom.txt",
+		"/C/Users/Oplkill/Desktop/X-Hero-Siege-master/game/dota_addons/x_hero_siege/scripts/npc/npc_heroes_custom.txt",
+		"/C/Users/Oplkill/Desktop/PetriReborn-master/game/dota_addons/petri_reborn/scripts/npc/npc_heroes_custom.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/styles/custom_game/overthrow_scoreboard.css",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/scripts/custom_game/overthrow_scoreboard_team_overlay.js",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/scripts/custom_game/music_player.js",
+		"/C/Users/Oplkill/Desktop/SlideNinjaSlide-master/game/dota_addons/slideninjaslide/scripts/vscripts/slide_ninja_slide.lua",
+		"/C/Users/Oplkill/Desktop/events.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/npc/heroes/npc_dota_hero_arye.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/npc/heroes/Новый текстовый документ.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/npc/heroes/npc_dota_hero_snipero.txt",
+		"/C/Users/Oplkill/Desktop/LiA-master/game/dota_addons/life_in_arena/scripts/npc/heroes/npc_lia_hero_ancient_priestess.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota_addons/junglerace/scripts/vscripts/music_player_new.lua",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/overthrow_scoreboard_team_overlay.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/scripts/custom_game/overthrow_scoreboard.js",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/overthrow_scoreboard_left.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/overthrow/panorama/styles/custom_game/overthrow_scoreboard.css",
+		"/C/Users/Oplkill/Desktop/test/jungleracepanorama/panorama/layout/custom_game/custom_ui_manifest.xml",
+		"/C/Users/Oplkill/Desktop/test/jungleracepanorama/panorama/layout/custom_game/custom_loading_screen.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/styles/custom_game/team_select.css",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/overthrow_game_info.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/overthrow_item_notification.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/overthrow_team_icon_large.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/overthrow_team_icon.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/overthrow/panorama/scripts/custom_game/overthrow_scoreboard_team_overlay.js",
+		"/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/gamesetup_options.xml"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ApplyDataDrivenModifier",
+			"a_b_DamageThink",
+			"cone_impact",
+			"knockback_interval",
+			"cone_impact",
+			"modifier_on_destroy",
+			"StartGesture",
+			"hysics",
+			"AttachPortalKeysToUrl",
+			"GetCharacterDataFromJSON",
+			"SaveCharacter",
+			"puck_dream_coil_datadriven",
+			"swap",
+			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES",
+			"modifier_chronosphere_speed_lua",
+			"uoba",
+			"unde",
+			"jakiro",
+			"assassin",
+			"assasin",
+			"DOTA_UNIT_TARGET_HERO",
+			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC",
+			"rage",
+			"test",
+			"last_w",
+			"last_",
+			"last",
+			"zoom",
+			"%",
+			"SPEED",
+			"HEAL",
+			"ARMOR BONUS",
+			"ATTACK SPEED",
+			"STUN CHANCE",
+			"CRITICAL DAMAGE",
+			"STUN DURATION",
+			"SLOW DURATION",
+			"CHANNEL DURATION",
+			"DURATION",
+			"\"DURATION\"",
+			"RADIUS",
+			"PlayerCurrHeroes",
+			"npc_dota_hero_bane",
+			"npc_dota_hero_vengefulspirit",
+			"npc_dota_hero_windrunner",
+			"npc_dota_hero_jakiro",
+			"npc_dota_hero_viper",
+			"CMEnabled",
+			"sele",
+			"select",
+			"dis",
+			"disco",
+			"Blur",
+			"jakiro",
+			"Breathe",
+			"blur",
+			"Длительность",
+			"furion_sprout",
+			"chronosphere",
+			"creature_chronosphere",
+			"arthas",
+			"arth",
+			"shield",
+			"hide",
+			"PlayerSay",
+			"chat",
+			"BasePanelPlayer1",
+			"astral",
+			"throw_to_astral",
+			"HIDE_KILL_BANNERS",
+			"USE_CUSTOM_TOP_BAR_VALUES",
+			"psd",
+			"DOTA_HUD_VISIBILITY_TOP_TIMEOFDAY",
+			"DOTA_HUD_VISIBILITY_TOP_HEROES",
+			"recent_score_count",
+			"TeamOverlay",
+			"currentSongIndex"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"DOTA_UNIT_TARGET_CREEP",
+			"СКОРОСТЬ",
+			"ЛЕЧИТ",
+			"ДОП ЗАЩИТА",
+			"СКОРОСТЬ АТАКИ",
+			"ШАНС СТАНА",
+			"КРИТ",
+			"ВРЕМЯ СТАНА",
+			"ВРЕМЯ ЗАМЕДЛЕНИЯ",
+			"ВРЕМЯ СТАНА",
+			"ДЛИТЕЛЬНОСТЬ",
+			"РАДИУС",
+			"Duration",
+			"png",
+			"currentSongIdInList"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 17,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/custom_ui_manifest.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5200,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5179,
+								5179
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "vscripts/junglerace/jr_globals.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								241,
+								241
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/Lua Dota/Lua.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "vscripts/abilities/spellstealer.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1991,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								956,
+								956
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/Lua Dota/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "npc/npc_units_custom.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 111153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5017,
+								5017
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota Reborn Package/dota-kv/dotaKV.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 19071.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "vscripts/abilities/doom.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1288,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								957,
+								957
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota Reborn Package/dota-lua/DOTA Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/oplkill/Desktop/scripts/npc/npc_abilities_custom.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 879940,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								217111,
+								222066
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota Reborn Package/dota-kv/dotaKV.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 133242.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/oplkill/Desktop/scripts/npc/npc_heroes_custom.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5217,
+								5226
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota Reborn Package/dota-kv/dotaKV.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 585.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Users/oplkill/Desktop/npc/npc_units_custom.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 76674,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								730,
+								730
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota Reborn Package/dota-kv/dotaKV.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 4140.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/Users/oplkill/Desktop/scripts/vscripts/dungeons.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 82150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								550,
+								550
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota Reborn Package/dota-lua/DOTA Lua.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 7560.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/Users/oplkill/Desktop/scripts/vscripts/internal/gamemode.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4427,
+								4445
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 810.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "vscripts/events.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10942,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								396,
+								396
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "vscripts/junglerace/jr_player_dis_connect.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1046,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								515,
+								515
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/C/Users/oplkill/Desktop/scripts/vscripts/events.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 117767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110785,
+								110791
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 40017.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "vscripts/junglerace/jr_create_units.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1656,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								548,
+								548
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "npc/npc_heroes_custom.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 370,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "vscripts/junglerace/jr_init.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3606,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3388,
+								3388
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota Reborn Package/dota-lua/DOTA Lua.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 930.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "vscripts/junglerace/jr_start_game.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4367,
+								4251
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota Reborn Package/dota-lua/DOTA Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1429.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "npc/npc_abilities_custom.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 77947,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75362,
+								75385
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota Reborn Package/dota-kv/dotaKV.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 32089.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "vscripts/abilities/killall.lua",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "vscripts/abilities/holy_cone.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								286,
+								286
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota Reborn Package/dota-lua/DOTA Lua.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 585.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "vscripts/wallphysics.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9433,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1308,
+								1308
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "vscripts/abilities/leshrac_wall.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1509,
+								1509
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota Reborn Package/dota-lua/DOTA Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "/C/Users/oplkill/Desktop/scripts/vscripts/wallphysics.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9427,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3,
+								14
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "vscripts/junglerace/jr_enter_end_laps_zones.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1324,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								735,
+								735
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/Lua Dota/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "vscripts/junglerace/jr_death.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1119,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								501,
+								501
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/Lua Dota/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "/C/Program Files (x86)/Steam/steamapps/common/dota 2 beta/content/dota_addons/junglerace/panorama/layout/custom_game/custom_loading_screen.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 470,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								470,
+								470
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "JRprojectST2.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

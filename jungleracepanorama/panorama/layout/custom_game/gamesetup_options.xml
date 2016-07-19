@@ -1,0 +1,70 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="file://{resources}/styles/custom_game/gamesetup_options.css" />
+	</styles> 
+	<script>
+
+		function OnVoteButtonPressed(category, vote)
+		{
+			$.Msg("Category: ", category);
+			$.Msg("Vote: ", vote);
+			GameEvents.SendCustomGameEventToServer( "setting_vote", { "category":category, "vote":vote } );
+		}
+
+		// This function is called at the start
+		(function() {
+			if (GameUI.CustomUIConfig().DebugMessagesEnabled == true)
+			{
+				$.Msg("GameSetup Options Initialised");
+				Game.SetRemainingSetupTime( -1 );
+				Game.SetAutoLaunchEnabled( false );
+			}
+
+		})();
+		
+	</script>
+	
+	<Panel class="ContainerGameSetup" hittest="false">
+		<Panel class="CustomSettingsColumn" hittest="false" >
+			<Panel class="ContainerCustomGameSettingsPanels" hittest="false" >
+
+				<Panel class="ContainerCustomGameSettingsTitle" hittest="false" >
+					<Label class="CustomGameSettingsHeaderTitle" text="Custom Game Settings" hittest="false" />
+				</Panel>
+
+				<Panel class="CustomSettingPanel" hittest="false">
+
+					<Panel class="ContainerCustomGameLengthTitle" hittest="false">
+						<Label class="CustomGameSettingsTitle" id="CustomGameLengthTitle1" hittest="false" text="How many laps" />
+					</Panel>
+
+					<Panel class="CustomGameSettingPanelDivider" hittest="false" />
+					<Panel class="ContainerCustomGameSettingOptions" hittest="false">
+						
+						<RadioButton class="CGSRadio" group="GameLength" text="5" 	onactivate="OnVoteButtonPressed('difficulty', 5)" 	/>
+						<RadioButton class="CGSRadio" group="GameLength" text="10" 	onactivate="OnVoteButtonPressed('difficulty', 10)" 	/>
+						<RadioButton class="CGSRadio" group="GameLength" text="15" 	onactivate="OnVoteButtonPressed('difficulty', 15)" 	/>
+						<RadioButton class="CGSRadio" group="GameLength" text="20" 	onactivate="OnVoteButtonPressed('difficulty', 20)" 	/>
+						<RadioButton class="CGSRadio" group="GameLength" text="25" 	onactivate="OnVoteButtonPressed('difficulty', 25)" 	/>
+						<RadioButton class="CGSRadio" group="GameLength" text="30" 	onactivate="OnVoteButtonPressed('difficulty', 30)" 	/>
+
+					</Panel>
+				</Panel>
+				<!--
+				<Panel class="CustomSettingPanel" hittest="false">
+					<Panel class="ContainerCustomGameLengthTitle" hittest="false">
+						<Label class="CustomGameSettingsTitle" id="CustomGameLengthTitle1" hittest="false" text="Combat System" />
+					</Panel>
+					<Panel class="CustomGameSettingPanelDivider" hittest="false" />
+					<Panel class="ContainerCustomGameSettingOptions" hittest="false">
+						<RadioButton class="CGSRadio" group="CombatSystem" text="Simple" onactivate="OnVoteButtonPressed('combat_system', 1)" />
+						<RadioButton class="CGSRadio" group="CombatSystem" text="Triangle" onactivate="OnVoteButtonPressed('combat_system', 2)" />
+					</Panel>
+				</Panel>
+				-->
+			</Panel>
+		</Panel>
+	</Panel>
+
+</root>

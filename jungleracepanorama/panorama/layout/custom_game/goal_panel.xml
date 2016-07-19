@@ -1,0 +1,13 @@
+<root>
+  <styles>
+    <include src="s2r://panorama/styles/dotastyles.vcss_c" />
+    <include src="file://{resources}/styles/custom_game/goal_panel.css" />
+  </styles>
+  <scripts>
+    <include src="file://{resources}/scripts/custom_game/goal_panel.js" /> 
+  </scripts>
+  <Panel hittest="false" class="BasePanel">
+    <Label hittest="false" id="GoalText" text="#goal"/>
+    <Label hittest="false" id="Goal" text="0"/>
+  </Panel>
+</root>

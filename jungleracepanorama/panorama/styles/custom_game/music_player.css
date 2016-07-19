@@ -1,0 +1,178 @@
+.BaseHud
+{
+    width: 100%;
+    height: 100%;
+	opacity: 0.8;
+	margin-top: 15px;
+}
+
+.MusicPlayer
+{
+    padding-top: 2px;
+    padding-left: 52px;
+    flow-children: right;
+	opacity: 0.8;
+	margin-top: 15px;
+}
+
+#MusicPlayerText
+{
+    color: #FFCC00;
+    text-shadow: 2px 2px 2px black;
+    font-size: 34px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.MusicPlayerButton
+{
+    width: 38px;
+    height: 38px;
+    margin-left: 2px;
+}
+
+#prevBtn
+{
+    background-image: url("file://{resources}/images/custom_game/music_player/PrevBtn.png");
+    background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#prevBtn:hover
+{
+	brightness: 1.5;
+}
+
+#prevBtn:active
+{
+	background-size: 90%;
+}
+
+#stopBtn
+{
+    background-image: url("file://{resources}/images/custom_game/music_player/StopBtn.png");
+    background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#stopBtn:hover
+{
+    brightness: 1.5;
+}
+
+#stopBtn:active
+{
+    background-size: 90%;
+}
+
+#playBtn
+{
+    background-image: url("file://{resources}/images/custom_game/music_player/PlayBtn.png");
+    background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#playBtn:hover
+{
+    brightness: 1.5;
+}
+
+#playBtn:active
+{
+    background-size: 90%;
+}
+
+#nextBtn
+{
+    background-image: url("file://{resources}/images/custom_game/music_player/NextBtn.png");
+    background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#nextBtn:hover
+{
+    brightness: 1.5;
+}
+
+#nextBtn:active
+{
+    background-size: 90%;
+}
+
+#loopBtn
+{
+    background-image: url("file://{resources}/images/custom_game/music_player/LoopBtn.png");
+    background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#loopBtn:hover
+{
+    brightness: 1.5;
+}
+
+#loopBtn:active
+{
+    background-size: 90%;
+}
+
+.loopBtnOff
+{
+    blur: gaussian( 1.5 );
+}
+
+.Clip
+{
+    clip: rect(44px, 300px, 110px,0px);
+    height: 80px;
+    width: 270px;
+    margin-left: 52px;
+}
+
+#NowPlayingBox
+{
+    margin-top: 44px;
+    height: 22px;
+    width: 270px;
+    margin-top: 22px;
+    text-overflow: clip;
+    transition-property: transform;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+}
+
+#NowPlaying
+{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    animation-name: scroll;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.playing
+{
+    transform: translateY(22px);
+}
+
+
+@keyframes 'scroll' 
+{
+    0% 
+    {
+        transform: translateX(100%);
+    }
+    100% 
+    {
+        transform: translateX(-100%);
+    }
+}

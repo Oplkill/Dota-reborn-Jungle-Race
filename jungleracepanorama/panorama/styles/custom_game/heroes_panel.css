@@ -1,0 +1,416 @@
+.AllPanels
+{
+    margin-left: 320px;
+    margin-top: 10px;
+    width: 1500px;
+    height: 100px;
+}
+
+.TeamIcon
+{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 23px;
+    height: 23px;
+}
+
+.ColorLine
+{
+    margin-top: -3px;
+    margin-left: 0px;
+    width: 70px;
+    height: 10px;
+}
+
+.BasePanelPlayer1
+{
+    flow-children: down;
+    width: 100px;
+    height: 40px;
+    
+    margin-left: 0px;
+    margin-top: 0px;
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.TeamIconPlayer1
+{
+    //background-color: red;
+    background-image: url("file://{resources}/images/custom_game/team_icons/Tiger.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ColorLinePlayer1
+{
+    background-color: #3dd296;
+    background-color: gradient( linear, 0% 0%, 50% 100%, from( #000000 ), to( #3dd296 ) );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.BasePanelPlayer2
+{
+    flow-children: down;
+    width: 100px;
+    height: 40px;
+    
+    margin-left: 110px;
+    margin-top: 0px;
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.TeamIconPlayer2
+{
+    //background-color: red;
+    background-image: url("file://{resources}/images/custom_game/team_icons/Monkey.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ColorLinePlayer2
+{
+    background-color: #F3C909;
+    background-color: gradient( linear, 0% 0%, 50% 100%, from( #000000 ), to( #F3C909 ) );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.BasePanelPlayer3
+{
+    flow-children: down;
+    width: 100px;
+    height: 40px;
+    
+    margin-left: 220px;
+    margin-top: 0px;
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.TeamIconPlayer3
+{
+    //background-color: red;
+    background-image: url("file://{resources}/images/custom_game/team_icons/Dragon.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ColorLinePlayer3
+{
+    background-color: #c54da8;
+    background-color: gradient( linear, 0% 0%, 50% 100%, from( #000000 ), to( #c54da8 ) );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.BasePanelPlayer4
+{
+    flow-children: down;
+    width: 100px;
+    height: 40px;
+    
+    margin-left: 330px;
+    margin-top: 0px;
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.TeamIconPlayer4
+{
+    //background-color: red;
+    background-image: url("file://{resources}/images/custom_game/team_icons/Dog.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ColorLinePlayer4
+{
+    background-color: #FF6C00;
+    background-color: gradient( linear, 0% 0%, 50% 100%, from( #000000 ), to( #FF6C00 ) );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.BasePanelPlayer5
+{
+    flow-children: down;
+    width: 100px;
+    height: 40px;
+    
+    margin-left: 440px;
+    margin-top: 0px;
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.TeamIconPlayer5
+{
+    //background-color: red;
+    background-image: url("file://{resources}/images/custom_game/team_icons/Rooster.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ColorLinePlayer5
+{
+    background-color: #3455FF;
+    background-color: gradient( linear, 0% 0%, 50% 100%, from( #000000 ), to( #3455FF ) );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.BasePanelPlayer6
+{
+    flow-children: down;
+    width: 100px;
+    height: 40px;
+    
+    margin-left: 550px;
+    margin-top: 0px;
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.TeamIconPlayer6
+{
+    //background-color: red;
+    background-image: url("file://{resources}/images/custom_game/team_icons/Ram.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ColorLinePlayer6
+{
+    background-color: #65d413;
+    background-color: gradient( linear, 0% 0%, 50% 100%, from( #000000 ), to( #65d413 ) );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.BasePanelPlayer7
+{
+    flow-children: down;
+    width: 100px;
+    height: 40px;
+    
+    margin-left: 660px;
+    margin-top: 0px;
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.TeamIconPlayer7
+{
+    //background-color: red;
+    background-image: url("file://{resources}/images/custom_game/team_icons/Rat.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ColorLinePlayer7
+{
+    background-color: #815336;
+    background-color: gradient( linear, 0% 0%, 50% 100%, from( #000000 ), to( #815336 ) );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.BasePanelPlayer8
+{
+    flow-children: down;
+    width: 100px;
+    height: 40px;
+    
+    margin-left: 770px;
+    margin-top: 0px;
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.TeamIconPlayer8
+{
+    //background-color: red;
+    background-image: url("file://{resources}/images/custom_game/team_icons/Boar.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ColorLinePlayer8
+{
+    background-color: #1bc0d8;
+    background-color: gradient( linear, 0% 0%, 50% 100%, from( #000000 ), to( #1bc0d8 ) );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.BasePanelPlayer9
+{
+    flow-children: down;
+    width: 100px;
+    height: 40px;
+    
+    margin-left: 880px;
+    margin-top: 0px;
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.TeamIconPlayer9
+{
+    //background-color: red;
+    background-image: url("file://{resources}/images/custom_game/team_icons/Snake.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ColorLinePlayer9
+{
+    background-color: #c7e40d;
+    background-color: gradient( linear, 0% 0%, 50% 100%, from( #000000 ), to( #c7e40d ) );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.BasePanelPlayer10
+{
+    flow-children: down;
+    width: 100px;
+    height: 40px;
+    
+    margin-left: 990px;
+    margin-top: 0px;
+
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.TeamIconPlayer10
+{
+    //background-color: red;
+    background-image: url("file://{resources}/images/custom_game/team_icons/Horse.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ColorLinePlayer10
+{
+    background-color: #8c2af4;
+    background-color: gradient( linear, 0% 0%, 50% 100%, from( #000000 ), to( #8c2af4 ) );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.LeftSidePanel
+{
+    margin-left: 0px;
+    margin-top: -10px;
+    width: 30px;
+    height: 60px;
+}
+
+.RightSidePanel
+{
+    margin-left: 30px;
+    margin-top: -37px;
+    width: 70px;
+    height: 60px;
+}
+
+.HeroImage
+{
+    margin-top: 2px;
+    margin-left: 0px;
+    height: 50px;
+    background-color: gradient( linear, 0% 0%, 50% 100%, from( #8c2af4 ), to( #FFFFFF ) );
+
+}
+
+.Laps
+{
+    margin-top: 28px;
+    margin-left: 0px;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 2px #7b612b;
+    width: 100%;
+    text-transform: uppercase;
+    text-overflow: clip;
+}
+
+
+
+
+
+
+
+
+.MusicPlayerButton
+{
+    width: 38px;
+    height: 38px;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+#prevBtn
+{
+    background-image: url("file://{resources}/images/custom_game/music_player/PrevBtn.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}

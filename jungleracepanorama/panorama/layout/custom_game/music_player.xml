@@ -1,0 +1,23 @@
+<root>
+  <styles>
+    <include src="s2r://panorama/styles/dotastyles.vcss_c" />
+    <include src="file://{resources}/styles/custom_game/music_player.css" />
+  </styles>
+  <scripts>
+    <include src="file://{resources}/scripts/custom_game/music_player.js" /> 
+  </scripts>
+  <Panel hittest="false" class="BaseHud">
+    <Panel hittest="false" id="MusicPlayer" class="MusicPlayer">
+        <Button id="prevBtn" class="MusicPlayerButton" onactivate="OnButtonPressed('prevBtn')"/>
+        <Button id="stopBtn" class="MusicPlayerButton" onactivate="OnButtonPressed('stopBtn')"/>
+        <Button id="playBtn" class="MusicPlayerButton" onactivate="OnButtonPressed('playBtn')"/>
+        <Button id="nextBtn" class="MusicPlayerButton" onactivate="OnButtonPressed('nextBtn')"/>
+        <Button id="loopBtn" class="MusicPlayerButton" onactivate="OnButtonPressed('loopBtn')"/>
+    </Panel>
+    <Panel hittest="false" class="Clip">
+      <Panel hittest="false" id="NowPlayingBox">
+        <Label hittest="false" id="NowPlaying" text="Placeholder"/>
+      </Panel>
+    </Panel>
+  </Panel>
+</root>

@@ -1,0 +1,27 @@
+// Юниты
+"DOTAUnits"
+{
+  "Version"  "1"
+  "npc_dota_arrow_trap"
+  {
+    "Model"      "models/development/invisiblebox.mdl"
+    "BaseClass"  "npc_dota_creature"
+    
+    // Способности
+    //----------------------------------------------------------------
+    "Ability1"   "dota_ability_trap_arrow"
+    "Ability2"   "unselectable"
+    "Ability3"   ""
+    "Ability4"   ""
+ 
+    // Атака
+    //----------------------------------------------------------------
+    "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
+ 
+    // Передвижение
+    //----------------------------------------------------------------
+    "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_NONE"
+ 
+    "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+  }
+}

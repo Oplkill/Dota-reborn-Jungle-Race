@@ -1,0 +1,58 @@
+"addon"
+{
+	"PointsToWin"									"+{d:points_to_win} more"
+	"PointsToWin_CloseToVictory"					"+{d:points_to_win} more"
+	"PointsToWin_VeryCloseToVictory"				"+{d:points_to_win} more!"
+	"PointsToWin_Victory"							"Победа!"
+
+	"InstructionsTitle"								"JUNGLE RACE"
+	"addonname"										"Jungle race"
+	
+	"InstructionsObjective"							"ЦЕЛЬ"
+	"InstructionsObjectiveText"						"Пройдите нужное количество кругов! Любой ценой наберите первым нужное количество кругов и не дав это сделать другим!"
+	"InstructionsHowToPlay"							"ПРАВИЛА"
+	"InstructionsLines"								"- Каждую жизнь вам дается один случайный герой.<br>
+													 - Бегите в конец линии в которой вы стоите.<br>
+													 - Конец первой линии перебрасывает вас на вторую.<br>
+													 - Конец второй линии прибавляет вам 1 круг.<br>
+													 - После смерти вы оживетесь на текущей линией.<br>
+													 - Используйте способности героев, чтобы помешать врагам прийти к финишной черте первыми.<br>
+													 - Тут нет друзей, есть только враги!"
+
+	"RecentScore"									"{d:score}"
+
+	"Unassigned"									"Неопределившиеся"
+	"Spectator"										"Наблюдатели"
+	"Neutrals"										"Нейтральная команда"
+	"NoTeam"										"Нет команды"
+
+	"DOTA_GoodGuys"									"Бирюзовые тигры"
+	"DOTA_BadGuys"									"Желтые обезьяны"
+	"DOTA_Custom1"									"Розовые драконы"
+	"DOTA_Custom2"									"Оранжевые псы"
+	"DOTA_Custom3"									"Синие петухи"
+	"DOTA_Custom4"									"Зеленые бараны"
+	"DOTA_Custom5"									"Коричневые крысы"
+	"DOTA_Custom6"									"Голубые кабаны"
+	"DOTA_Custom7"									"Оливковые змеи"
+	"DOTA_Custom8"									"Фиолетовые кони"
+
+	"Remaining"										"ОСТАЛОСЬ"
+
+	"Overtime"										"OVERTIME!"
+	"OvertimeInstructions"							"Кругов до победы"
+	
+	
+	"overthrow_game_info_header_objective"			"Цель:"
+	"overthrow_brief_description"					"Первый кто пройдет заданное количество кругов - победит!"
+	"overthrow_game_info_header_how_to_play"		"Как играть:"
+	"overthrow_game_info_throne"					""
+	"overthrow_game_info_coins"						""
+	"overthrow_game_info_items"						""
+	"overthrow_game_info_tips_header"				"Советы:"
+	"overthrow_game_info_tip01"						""
+	"overthrow_game_info_tip02"						""
+	"overthrow_game_info_tip03"						""
+	"overthrow_game_info_tip04"						""
+}
+

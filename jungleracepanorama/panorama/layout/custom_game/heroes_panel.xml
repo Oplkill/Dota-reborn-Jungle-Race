@@ -1,0 +1,141 @@
+<root>
+  <styles>
+    <include src="s2r://panorama/styles/dotastyles.vcss_c" />
+    <include src="file://{resources}/styles/custom_game/heroes_panel.css" />
+  </styles>
+  <scripts>
+    <include src="file://{resources}/scripts/custom_game/heroes_panel.js" /> 
+  </scripts>
+  <Panel class="AllPanels">
+    
+    <Panel hittest="false"      id="BasePanel1"   class="BasePanelPlayer1">
+      <Panel hittest="false"                      class="LeftSidePanel">
+        <Label hittest="false"  id="Laps1"        class="Laps" text="0"/>
+        <Panel hittest="false"  id="TeamIcon1"    class="TeamIcon"></Panel>
+      </Panel>
+      <Panel hittest="false"                      class="RightSidePanel">
+        <Panel hittest="false"  id="ColorLine1"   class="ColorLine"></Panel>
+        <Button class="HeroImage" onactivate="OnButtonPressed(1)">
+          <Image id="HeroImage1" src="file://{resources}/images/heroes/default.png" />
+        </Button>
+      </Panel>
+    </Panel>
+
+    <Panel hittest="false"      id="BasePanel2"   class="BasePanelPlayer2">
+      <Panel hittest="false"                      class="LeftSidePanel">
+        <Label hittest="false"  id="Laps2"        class="Laps" text="0"/>
+        <Panel hittest="false"  id="TeamIcon2"    class="TeamIcon"></Panel>
+      </Panel>
+      <Panel hittest="false"                      class="RightSidePanel">
+        <Panel hittest="false"  id="ColorLine2"   class="ColorLine"></Panel>
+        <Button class="HeroImage" onactivate="OnButtonPressed(2)">
+          <Image id="HeroImage2" src="file://{resources}/images/heroes/default.png" />
+        </Button>
+      </Panel>
+    </Panel>
+
+    <Panel hittest="false"      id="BasePanel3"   class="BasePanelPlayer3">
+      <Panel hittest="false"                      class="LeftSidePanel">
+        <Label hittest="false"  id="Laps3"        class="Laps" text="0"/>
+        <Panel hittest="false"  id="TeamIcon3"    class="TeamIcon"></Panel>
+      </Panel>
+      <Panel hittest="false"                      class="RightSidePanel">
+        <Panel hittest="false"  id="ColorLine3"   class="ColorLine"></Panel>
+        <Button class="HeroImage" onactivate="OnButtonPressed(3)">
+          <Image id="HeroImage3" src="file://{resources}/images/heroes/default.png" />
+        </Button>
+      </Panel>
+    </Panel>
+
+    <Panel hittest="false"      id="BasePanel4"   class="BasePanelPlayer4">
+      <Panel hittest="false"                      class="LeftSidePanel">
+        <Label hittest="false"  id="Laps4"        class="Laps" text="0"/>
+        <Panel hittest="false"  id="TeamIcon4"    class="TeamIcon"></Panel>
+      </Panel>
+      <Panel hittest="false"                      class="RightSidePanel">
+        <Panel hittest="false"  id="ColorLine4"   class="ColorLine"></Panel>
+        <Button class="HeroImage" onactivate="OnButtonPressed(4)">
+          <Image id="HeroImage4" src="file://{resources}/images/heroes/default.png" />
+        </Button>
+      </Panel>
+    </Panel>
+
+    <Panel hittest="false"      id="BasePanel5"   class="BasePanelPlayer5">
+      <Panel hittest="false"                      class="LeftSidePanel">
+        <Label hittest="false"  id="Laps5"        class="Laps" text="0"/>
+        <Panel hittest="false"  id="TeamIcon5"    class="TeamIcon"></Panel>
+      </Panel>
+      <Panel hittest="false"                      class="RightSidePanel">
+        <Panel hittest="false"  id="ColorLine5"   class="ColorLine"></Panel>
+        <Button class="HeroImage" onactivate="OnButtonPressed(5)">
+          <Image id="HeroImage5" src="file://{resources}/images/heroes/default.png" />
+        </Button>
+      </Panel>
+    </Panel>
+
+    <Panel hittest="false"      id="BasePanel6"   class="BasePanelPlayer6">
+      <Panel hittest="false"                      class="LeftSidePanel">
+        <Label hittest="false"  id="Laps6"        class="Laps" text="0"/>
+        <Panel hittest="false"  id="TeamIcon6"    class="TeamIcon"></Panel>
+      </Panel>
+      <Panel hittest="false"                      class="RightSidePanel">
+        <Panel hittest="false"  id="ColorLine6"   class="ColorLine"></Panel>
+        <Button class="HeroImage" onactivate="OnButtonPressed(6)">
+          <Image id="HeroImage6" src="file://{resources}/images/heroes/default.png" />
+        </Button>
+      </Panel>
+    </Panel>
+
+    <Panel hittest="false"      id="BasePanel7"   class="BasePanelPlayer7">
+      <Panel hittest="false"                      class="LeftSidePanel">
+        <Label hittest="false"  id="Laps7"        class="Laps" text="0"/>
+        <Panel hittest="false"  id="TeamIcon7"    class="TeamIcon"></Panel>
+      </Panel>
+      <Panel hittest="false"                      class="RightSidePanel">
+        <Panel hittest="false"  id="ColorLine7"   class="ColorLine"></Panel>
+        <Button class="HeroImage" onactivate="OnButtonPressed(7)">
+          <Image id="HeroImage7" src="file://{resources}/images/heroes/default.png" />
+        </Button>
+      </Panel>
+    </Panel>
+
+    <Panel hittest="false"      id="BasePanel8"   class="BasePanelPlayer8">
+      <Panel hittest="false"                      class="LeftSidePanel">
+        <Label hittest="false"  id="Laps8"        class="Laps" text="0"/>
+        <Panel hittest="false"  id="TeamIcon8"    class="TeamIcon"></Panel>
+      </Panel>
+      <Panel hittest="false"                      class="RightSidePanel">
+        <Panel hittest="false"  id="ColorLine8"   class="ColorLine"></Panel>
+        <Button class="HeroImage" onactivate="OnButtonPressed(8)">
+          <Image id="HeroImage8" src="file://{resources}/images/heroes/default.png" />
+        </Button>
+      </Panel>
+    </Panel>
+
+    <Panel hittest="false"      id="BasePanel9"   class="BasePanelPlayer9">
+      <Panel hittest="false"                      class="LeftSidePanel">
+        <Label hittest="false"  id="Laps9"        class="Laps" text="0"/>
+        <Panel hittest="false"  id="TeamIcon9"    class="TeamIcon"></Panel>
+      </Panel>
+      <Panel hittest="false"                      class="RightSidePanel">
+        <Panel hittest="false"  id="ColorLine9"   class="ColorLine"></Panel>
+        <Button class="HeroImage" onactivate="OnButtonPressed(9)">
+          <Image id="HeroImage9" src="file://{resources}/images/heroes/default.png" />
+        </Button>
+      </Panel>
+    </Panel>
+
+    <Panel hittest="false"      id="BasePanel10"  class="BasePanelPlayer10">
+      <Panel hittest="false"                      class="LeftSidePanel">
+        <Label hittest="false"  id="Laps10"       class="Laps" text="0"/>
+        <Panel hittest="false"  id="TeamIcon10"   class="TeamIcon"></Panel>
+      </Panel>
+      <Panel hittest="false"                      class="RightSidePanel">
+        <Panel hittest="false"  id="ColorLine10"  class="ColorLine"></Panel>
+        <Button class="HeroImage" onactivate="OnButtonPressed(10)">
+          <Image id="HeroImage10" src="file://{resources}/images/heroes/default.png" />
+        </Button>
+      </Panel>
+    </Panel>
+  </Panel>
+</root>

@@ -1,0 +1,58 @@
+"addon"
+{
+	"PointsToWin"									"+{d:points_to_win} more"
+	"PointsToWin_CloseToVictory"					"+{d:points_to_win} more"
+	"PointsToWin_VeryCloseToVictory"				"+{d:points_to_win} more!"
+	"PointsToWin_Victory"							"Victory!"
+
+	"InstructionsTitle"								"JUNGLE RACE"
+	"addonname"										"Jungle race"
+	
+	"InstructionsObjective"							"ЦЕЛЬ"
+	"InstructionsObjectiveText"						"Пройдите нужное количество кругов! Любой ценой наберите первым нужное количество кругов и не дав это сделать другим!"
+	"InstructionsHowToPlay"							"ПРАВИЛА"
+	"InstructionsLines"								"- Каждую жизнь вам дается один случайный герой.<br>
+													 - Бегите в конец линии в которой вы стоите.<br>
+													 - Конец первой линии перебрасывает вас на вторую.<br>
+													 - Конец второй линии прибавляет вам 1 круг.<br>
+													 - После смерти вы оживетесь на текущей линией.<br>
+													 - Используйте способности героев, чтобы помешать врагам прийти к финишной черте первыми.<br>
+													 - Тут нет друзей, есть только враги!"
+
+	"RecentScore"									"{d:score}"
+
+	"Unassigned"      								"Unassigned Team"
+	"Spectator"       								"Spectator Team"
+	"Neutrals"        								"Neutral Team"
+	"NoTeam"          								"No Team"
+
+	"DOTA_GoodGuys"   								"Teal Tiger"
+	"DOTA_BadGuys"    								"Yellow Monkey"
+	"DOTA_Custom1"    								"Pink Dragon"
+	"DOTA_Custom2"    								"Orange Dog"
+	"DOTA_Custom3"    								"Blue Rooster"
+	"DOTA_Custom4"    								"Green Ram"
+	"DOTA_Custom5"    								"Brown Rat"
+	"DOTA_Custom6"    								"Cyan Boar"
+	"DOTA_Custom7"    								"Olive Snake"
+	"DOTA_Custom8"    								"Purple Horse"
+
+	"Remaining"										"LEFT"
+
+	"Overtime"										"OVERTIME!"
+	"OvertimeInstructions"							"Laps to win"
+	
+	
+	"overthrow_game_info_header_objective"			"Objective:"
+	"overthrow_brief_description"					"Slay your enemies! First team to hit the kill limit wins!"
+	"overthrow_game_info_header_how_to_play"		"How To Play:"
+	"overthrow_game_info_throne"					""
+	"overthrow_game_info_coins"						""
+	"overthrow_game_info_items"						""
+	"overthrow_game_info_tips_header"				"Tips:"
+	"overthrow_game_info_tip01"						""
+	"overthrow_game_info_tip02"						""
+	"overthrow_game_info_tip03"						""
+	"overthrow_game_info_tip04"						""
+}
+
