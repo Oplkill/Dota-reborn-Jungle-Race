@@ -1,4 +1,4 @@
-require('music_player_new')
+require('junglerace/GameModes/miranapudge')
 
 
 function InitJungleRaceGame()
@@ -10,6 +10,7 @@ function InitJungleRaceGame()
 		Player_Laps[i] = 0
 		Player_Half_Lap[i] = false
 		Players_state[i] = 0
+		CurrentPlayerUnit[i] = nil
     end
 	
 	--Init heroes
@@ -36,7 +37,7 @@ function InitJungleRaceGame()
 	
 	Random_Heroes[8] = "unit_yoba"	-- Magistr YoBa
 	RealHeroNames[8] = "keeper_of_the_light"
-	UnitAbils[8] = { "super_mana_all_aura", "doom_bringer_doom_datadriven", "Snipe", "chilli_willi_all_aura", "Swap", "Vanish", "Sleep", "Banish", "Cyclone", "Freeze", "Venom_Strike", "Polymorph", "Unstable_Current", "kunkka_torrent_datadriven", "pudge_hook", "furion_sprout", "creature_chronosphere", "innocent_blur", "jakiro_ice_path", "jakiro_fire_path", "rubick_spell_steal_datadriven", "phoenix_supernova", "puck_dream_coil_datadriven" }
+	UnitAbils[8] = { "super_mana_all_aura", "doom_bringer_doom_datadriven", "Snipe", "chilli_willi_all_aura", "Swap", "Vanish", "Sleep", "Banish", "Cyclone", "Freeze", "Venom_Strike", "Polymorph", "Unstable_Current", "kunkka_torrent_datadriven", "pudge_hook", "furion_sprout", "creature_chronosphere", "innocent_blur", "jakiro_ice_path", "jakiro_fire_path", "rubick_spell_steal_datadriven", "phoenix_supernova", "puck_dream_coil_datadriven", "leshrac_wall" }
 
 	Random_Heroes[9] = "unit_gyrocopter"	-- Vertolet
 	RealHeroNames[9] = "gyrocopter"
@@ -98,12 +99,15 @@ function InitJungleRaceGame()
 
 	Random_Heroes[28] = "unit_rubick"	-- Rubick
 	RealHeroNames[28] = "rubick"
+
+	Random_Heroes[29] = "unit_leshrac"	-- Leshrac
+	RealHeroNames[29] = "leshrac"
 	
 	-----------------------------------------------------------------------------------------------
 	
 	Random_Heroes[99] = "unit_yoba"	-- TEST
 	RealHeroNames[99] = "npc_dota_hero_keeper_of_the_light"
-	UnitAbils[99] = { "holy_cone" }
+	UnitAbils[99] = { "last_word" }
 	
 	--[[
 	Random_Heroes[] = ""	-- 
@@ -114,7 +118,10 @@ function InitJungleRaceGame()
 	--MusicPlayer:Init('scripts/music.kv') 
 	
 	----------------------------------
+
 	
+	gmMiranaPudgeInit()
+
 	
 	print('[JungleRace] Game inited ----------------------------')
 end

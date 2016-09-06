@@ -70,6 +70,12 @@ function Precache( context )
   PrecacheUnitByNameSync( "unit_furion", 		    context)
   PrecacheUnitByNameSync( "unit_phoenix", 		  context)
   PrecacheUnitByNameSync( "unit_faceless", 		  context)
+  PrecacheUnitByNameSync( "unit_leshrac",       context)
+
+
+
+  PrecacheUnitByNameSync( "unit_gm_mirana",      context)
+  PrecacheUnitByNameSync( "unit_gm_pudge",       context)
   
   
   

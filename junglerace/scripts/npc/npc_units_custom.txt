@@ -1639,15 +1639,16 @@
 		"Ability4"					""
 		"ArmorPhysical"				"0"								
 
-		"Model"						"models/heroes/windrunner/windrunner.mdl"				// Model.
-		"Portrait"					"vgui/hud/heroportraits/portrait_windrunner"		// Small image for hero selection
-		"IdleExpression"			"scenes/windrunner/windrunner_exp_idle_01.vcd"		// custom facial animation idle
+		//"Model"						"models\courier\defense3_sheep\defense3_sheep.vmdl"				// Model.
+		"Model"						"models\items\hex\sheep_hex\sheep_hex.vmdl"				// Model.
+		//"Portrait"					"vgui/hud/heroportraits/portrait_windrunner"		// Small image for hero selection
+		//"IdleExpression"			"scenes/windrunner/windrunner_exp_idle_01.vcd"		// custom facial animation idle
 		"SoundSet"					"Hero_Windrunner"							// Name of sound set.
 		"ModelScale"				"0.98"
 		"LoadoutScale"				"1.1"
 		"NameAliases"				"wr"
-		"LastHitChallengeRival"		"npc_dota_hero_drow_ranger"
-		"HeroSelectSoundEffect"		")weapons/hero/windrunner/focus_fire.wav"
+		//"LastHitChallengeRival"		"npc_dota_hero_drow_ranger"
+		//"HeroSelectSoundEffect"		")weapons/hero/windrunner/focus_fire.wav"
 
 		// Attack
 		//-------------------------------------------------------------------------------------------------------------
@@ -1658,7 +1659,7 @@
 		"AttackAnimationPoint"		"0.4"									// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"800"									// Range within a target can be acquired.
 		"AttackRange"				"600"									// Range within a target can be attacked.
-		"ProjectileModel"			"windrunner_base_attack"				// Particle system model for projectile.
+		//"ProjectileModel"			"windrunner_base_attack"				// Particle system model for projectile.
 		"ProjectileSpeed"			"1250"									// Speed of projectile.
 
 		// Movement
@@ -1668,26 +1669,11 @@
 		"MovementTurnRate"			"0.6"									// Turning rate.
 		"HasAggressiveStance"		"1"										// Plays alternate idle/run animation when near enemies
 		
-		"ParticleFile"				"particles/units/heroes/hero_windrunner.pcf"
+		//"ParticleFile"				"particles/units/heroes/hero_windrunner.pcf"
 		"GameSoundsFile"			"scripts/game_sounds_heroes/game_sounds_windrunner.txt"
 		"VoiceFile"					"scripts/voscripts/game_sounds_vo_windrunner.txt"
 		"HealthBarOffset"			"160"
 		"VisionNighttimeRange"		"800"
-
-		"RenderablePortrait"
-		{
-			"Particles"
-			{
-				"windrunner_loadout"
-				{
-					"0"
-					{
-						"type"		"follow_origin"
-						"location"	"attach_hitloc"
-					}
-				}	
-			}
-		}
 		
 		"StatusHealth"               "15"       // Здоровье.
 		"StatusHealthRegen"          "0"         // Регенерация в секунду.
@@ -1706,14 +1692,6 @@
         "Creature"
         {
             "DisableClumpingBehavior"       "1"
-            "AttachWearables"
-            {
-                "Wearable1" { "ItemDef" "21" }
-                "Wearable2" { "ItemDef" "22" }
-                "Wearable3" { "ItemDef" "23" }
-                "Wearable4" { "ItemDef" "24" }
-                "Wearable5" { "ItemDef" "25" }
-			}
         }			
 	}
 
@@ -2690,7 +2668,7 @@
 	{
 		"BaseClass"     			"npc_dota_creature"
 		"Ability1"					"phoenix_minus_regen"
-		"Ability2"					"fire_aura"
+		"Ability2"					""
 		"Ability3"					"phoenix_supernova"
 		"Ability4"					""
 		"ArmorPhysical"				"0"								
@@ -3134,4 +3112,170 @@
         }			
 	}
 
+	"unit_leshrac"
+	{
+		"BaseClass"     			"npc_dota_creature"
+		"Ability1"					"leshrac_wall"
+		"Ability2"					"leshrac_blink"
+		"Ability3"					""
+		"Ability4"					""
+		"ArmorPhysical"				"0"
+
+		"Model"						"models/heroes/leshrac/leshrac.mdl"	// Model.
+		"Portrait"					"vgui/hud/heroportraits/portrait_leshrac"		// Small image for hero selection
+		"SoundSet"					"Hero_Leshrac"									// Name of sound set.
+		"ModelScale"				".84"
+		"LoadoutScale"          	".75"
+		"LastHitChallengeRival"		"npc_dota_hero_lion"
+		"HeroSelectSoundEffect"		")weapons/hero/leshrac/split_earth.wav"
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"0"									// Damage range min.
+		"AttackDamageMax"			"0"									// Damage range max.
+		"AttackRate"				"1.7"									// Speed of attack.
+		"AttackAnimationPoint"		"0.5"									// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"									// Range within a target can be acquired.
+		"AttackRange"				"128"									// Range within a target can be attacked.
+		"ProjectileModel"			""										// Particle system model for projectile.
+		"ProjectileSpeed"			""										// Speed of projectile.
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"  	"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"120"									// Speed.
+		"MovementTurnRate"			"1.0"									// Turning rate.
+		"HasAggressiveStance"		"1"										// Plays alternate idle/run animation when near enemies
+		
+		"VoiceFile"				"scripts/voscripts/game_sounds_vo_leshrac.txt"
+		"ParticleFile"			"particles/units/heroes/hero_leshrac.pcf"
+		"GameSoundsFile"		"scripts/game_sounds_heroes/game_sounds_leshrac.txt"
+		"HealthBarOffset"			"170"
+		"VisionNighttimeRange"		"800"
+
+		// Additional data needed to render the out of game portrait
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"leshrac_ambient_glow"
+				{
+					"0"
+					{
+						"type"		"follow_origin"
+						"location"	"attach_hitloc"  //Note : shouldn't need this
+					}
+				}
+				"leshrac_loadout"
+				{
+					"0"
+					{
+						"type"		"follow_origin"
+						"location"		"attach_hitloc"
+					}
+				}
+			}
+		}
+		
+		"StatusHealth"                "13"        // Здоровье.
+		"StatusHealthRegen"           "0"         // Регенерация в секунду.
+		"StatusMana"                  "3"         // Мана.
+		"StatusManaRegen"             "0"         // Регенерация маны в секунду.
+
+		"BoundsHullName"        	"DOTA_HULL_SIZE_HERO"
+	    "RingRadius"            	"70"
+
+	    "SelectionGroup"               "npc_dota_hero_zuus"              
+		"SelectOnSpawn"                "1"
+		"IgnoreAddSummonedToSelection" "0"
+
+	    // Creature Data
+        //----------------------------------------------------------------
+        "Creature"
+        {
+            "DisableClumpingBehavior"       "1"
+            "AttachWearables"
+            {
+                "Wearable1" { "ItemDef" "345" }
+                "Wearable2" { "ItemDef" "346" }
+                "Wearable3" { "ItemDef" "347" }
+                "Wearable4" { "ItemDef" "529" }
+			}
+        }			
+	}
+
+
+	//-------------------------------------------------------------------------------------------------------
+
+	"unit_gm_pudge"
+	{
+		"BaseClass"     			"npc_dota_creature"
+		"Ability1"					"gm_pudge_hook"
+		"Ability2"					""
+		"Ability3"					""
+
+		"Model"						"models/heroes/pudge/pudge.mdl"	// Model.
+		"Portrait"					"vgui/hud/heroportraits/portrait_pudge"		// Small image for hero selection
+		"ModelScale"				".80"
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		"MovementCapabilities"  	"DOTA_UNIT_CAP_MOVE_NONE"
+		
+		"StatusHealth"              "1"        	// Здоровье.
+		"StatusHealthRegen"         "0"         // Регенерация в секунду.
+		"StatusMana"                "0"         // Мана.
+		"StatusManaRegen"           "0"         // Регенерация маны в секунду.
+
+        "Creature"
+        {
+            "DisableClumpingBehavior"       "1"
+            "AttachWearables"
+            {
+                "Wearable1" { "ItemDef" "47" }
+                "Wearable2" { "ItemDef" "258" }
+                "Wearable3" { "ItemDef" "259" }
+                "Wearable4" { "ItemDef" "260" }
+                "Wearable5" { "ItemDef" "261" }
+                "Wearable6" { "ItemDef" "262" }
+			}
+        }
+	}
+
+	"unit_gm_mirana"
+	{
+		"BaseClass"     			"npc_dota_creature"
+		"Ability1"					"gm_mirana_arrow"
+		"Ability2"					""
+		"Ability3"					""
+
+		"Model"						"models/heroes/mirana/mirana.mdl"	// Model.
+		"Portrait"					"vgui/hud/heroportraits/portrait_mirana"		// Small image for hero selection
+		"ModelScale"				".79"
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		"MovementCapabilities"  	"DOTA_UNIT_CAP_MOVE_NONE"
+		
+		"StatusHealth"              "1"        	// Здоровье.
+		"StatusHealthRegen"         "0"         // Регенерация в секунду.
+		"StatusMana"                "0"         // Мана.
+		"StatusManaRegen"           "0"         // Регенерация маны в секунду.
+
+        "Creature"
+        {
+            "DisableClumpingBehavior"       "1"
+            "AttachWearables"
+            {
+                "Wearable1" { "ItemDef" "403" }
+                "Wearable2" { "ItemDef" "404" }
+                "Wearable3" { "ItemDef" "405" }
+                "Wearable4" { "ItemDef" "406" }
+                "Wearable5" { "ItemDef" "407" }
+                "Wearable6" { "ItemDef" "408" }
+                "Wearable7" { "ItemDef" "409" }
+			}
+        }			
+	}
 }

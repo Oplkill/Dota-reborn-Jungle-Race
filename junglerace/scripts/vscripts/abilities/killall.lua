@@ -4,7 +4,7 @@ function KillAllEndChannel( keys )
 
 	--print("[DEBUG KILL all] caster is - "..caster:GetUnitName().."   and his team is - "..caster:GetTeamNumber())
 
-	direUnits = FindUnitsInRadius(caster:GetTeamNumber(),
+	local direUnits = FindUnitsInRadius(caster:GetTeamNumber(),
                               Vector(0, 0, 0),
                               nil,
                               FIND_UNITS_EVERYWHERE,

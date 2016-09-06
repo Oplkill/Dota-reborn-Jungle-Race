@@ -7,6 +7,17 @@ require('junglerace/jr_player_dis_connect')
 require('junglerace/jr_debug')
 require('wallPhysics')
 
+function GameMode:On_dota_player_update_hero_selection(data)
+  print("[BAREBONES] dota_player_update_hero_selection---------------------------------------------------")
+  PrintTable(data)
+end
+
+
+function GameMode:On_dota_player_update_selected_unit(data)
+  print("[BAREBONES] dota_player_update_selected_unit----------------------------------------------------")
+  PrintTable(data)
+end
+
 -- Cleanup a player when they leave
 function GameMode:OnDisconnect(keys)
   DebugPrint('[BAREBONES] Player Disconnected ' .. tostring(keys.userid))
@@ -27,6 +38,17 @@ function GameMode:OnPlayerReconnect(keys)
   DebugPrintTable(keys) 
   
   jr_player_reconnected(keys.userid)
+end
+
+-- This function is called 1 to 2 times as the player connects initially but before they 
+-- have completely connected
+function GameMode:PlayerConnect(keys)
+  DebugPrint('[BAREBONES] PlayerConnect')
+  DebugPrintTable(keys)
+
+  if GameStarted then
+    jr_player_reconnected(keys.userid)
+  end
 end
 
 -- The overall game state has changed
@@ -106,6 +128,7 @@ function GameMode:OnAbilityUsed(keys)
 
   local player = PlayerResource:GetPlayer(keys.PlayerID)
   local abilityname = keys.abilityname
+  
 end
 
 -- A non-player entity (necro-book, chen creep, etc) used an ability
@@ -152,18 +175,6 @@ function GameMode:OnPlayerLevelUp(keys)
   local level = keys.level
 end
 
--- A player last hit a creep, a tower, or a hero
-function GameMode:OnLastHit(keys)
-  DebugPrint('[BAREBONES] OnLastHit')
-  DebugPrintTable(keys)
-
-  local isFirstBlood = keys.FirstBlood == 1
-  local isHeroKill = keys.HeroKill == 1
-  local isTowerKill = keys.TowerKill == 1
-  local player = PlayerResource:GetPlayer(keys.PlayerID)
-  local killedEnt = EntIndexToHScript(keys.EntKilled)
-end
-
 -- A tree was cut down by tango, quelling blade, etc
 function GameMode:OnTreeCut(keys)
   DebugPrint('[BAREBONES] OnTreeCut')
@@ -196,15 +207,6 @@ function GameMode:OnRuneActivated (keys)
   ]]
 end
 
--- A player took damage from a tower
-function GameMode:OnPlayerTakeTowerDamage(keys)
-  DebugPrint('[BAREBONES] OnPlayerTakeTowerDamage')
-  DebugPrintTable(keys)
-
-  local player = PlayerResource:GetPlayer(keys.PlayerID)
-  local damage = keys.damage
-end
-
 -- A player picked a hero
 function GameMode:OnPlayerPickHero(keys)
   DebugPrint('[BAREBONES] OnPlayerPickHero')
@@ -215,17 +217,6 @@ function GameMode:OnPlayerPickHero(keys)
   local player = EntIndexToHScript(keys.player)
   
   HeroesSpawnedOnce(heroEntity, player)
-end
-
--- A player killed another player in a multi-team context
-function GameMode:OnTeamKillCredit(keys)
-  DebugPrint('[BAREBONES] OnTeamKillCredit')
-  DebugPrintTable(keys)
-
-  local killerPlayer = PlayerResource:GetPlayer(keys.killer_userid)
-  local victimPlayer = PlayerResource:GetPlayer(keys.victim_userid)
-  local numKills = keys.herokills
-  local killerTeamNumber = keys.teamnumber
 end
 
 -- An entity died
@@ -257,13 +248,6 @@ function GameMode:OnEntityKilled( keys )
   SomeUnitDied(killedUnit)
 end
 
--- This function is called 1 to 2 times as the player connects initially but before they 
--- have completely connected
-function GameMode:PlayerConnect(keys)
-  DebugPrint('[BAREBONES] PlayerConnect')
-  DebugPrintTable(keys)
-end
-
 -- This function is called once when the player fully connects and becomes "Ready" during Loading
 function GameMode:OnConnectFull(keys)
   DebugPrint('[BAREBONES] OnConnectFull')
@@ -279,31 +263,6 @@ function GameMode:OnConnectFull(keys)
   local playerID = ply:GetPlayerID()
 end
 
--- This function is called whenever illusions are created and tells you which was/is the original entity
-function GameMode:OnIllusionsCreated(keys)
-  DebugPrint('[BAREBONES] OnIllusionsCreated')
-  DebugPrintTable(keys)
-
-  local originalEntity = EntIndexToHScript(keys.original_entindex)
-end
-
--- This function is called whenever an item is combined to create a new item
-function GameMode:OnItemCombined(keys)
-  DebugPrint('[BAREBONES] OnItemCombined')
-  DebugPrintTable(keys)
-
-  -- The playerID of the hero who is buying something
-  local plyID = keys.PlayerID
-  if not plyID then return end
-  local player = PlayerResource:GetPlayer(plyID)
-
-  -- The name of the item purchased
-  local itemName = keys.itemname 
-  
-  -- The cost of the item purchased
-  local itemcost = keys.itemcost
-end
-
 -- This function is called whenever an ability begins its PhaseStart phase (but before it is actually cast)
 function GameMode:OnAbilityCastBegins(keys)
   DebugPrint('[BAREBONES] OnAbilityCastBegins')
@@ -311,36 +270,8 @@ function GameMode:OnAbilityCastBegins(keys)
 
   local player = PlayerResource:GetPlayer(keys.PlayerID)
   local abilityName = keys.abilityname
-end
 
--- This function is called whenever a tower is killed
-function GameMode:OnTowerKill(keys)
-  DebugPrint('[BAREBONES] OnTowerKill')
-  DebugPrintTable(keys)
 
-  local gold = keys.gold
-  local killerPlayer = PlayerResource:GetPlayer(keys.killer_userid)
-  local team = keys.teamnumber
-end
-
--- This function is called whenever a player changes there custom team selection during Game Setup 
-function GameMode:OnPlayerSelectedCustomTeam(keys)
-  DebugPrint('[BAREBONES] OnPlayerSelectedCustomTeam')
-  DebugPrintTable(keys)
-
-  local player = PlayerResource:GetPlayer(keys.player_id)
-  local success = (keys.success == 1)
-  local team = keys.team_id
-end
-
--- This function is called whenever an NPC reaches its goal position/target
-function GameMode:OnNPCGoalReached(keys)
-  DebugPrint('[BAREBONES] OnNPCGoalReached')
-  DebugPrintTable(keys)
-
-  local goalEntity = EntIndexToHScript(keys.goal_entindex)
-  local nextGoalEntity = EntIndexToHScript(keys.next_goal_entindex)
-  local npc = EntIndexToHScript(keys.npc_entindex)
 end
 
 -- This function is called whenever any player sends a chat message to team or All
@@ -371,4 +302,22 @@ function GameMode:OnSettingVote(keys)
 	--PrintTable(keys)
 	
 	Player_Lap_Votes[pid] = keys.vote
+end
+
+
+function GameMode:OnGameModeChecked(keys)
+  local pid   = keys.PlayerID
+  
+  --[[if not Gamerules:PlayerHasCustomGameHostPrivileges(keys.Player) then
+    return
+  end]]
+
+  print("[JUNGLERACE] Player "..pid.." checked game mode "..keys.gamemode.." = "..keys.checked)
+  --PrintTable(keys)
+  
+  if keys.checked == 1 then
+    GM[keys.gamemode] = true
+  else
+    GM[keys.gamemode] = false
+  end
 end

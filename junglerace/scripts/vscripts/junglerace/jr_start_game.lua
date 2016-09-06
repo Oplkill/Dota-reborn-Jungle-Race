@@ -1,6 +1,7 @@
 require('junglerace/jr_globals')
 require('music_player_new')
 require('junglerace/jr_debug')
+require('junglerace/GameModes/miranapudge')
 
 RoundStarted = false
 
@@ -20,7 +21,8 @@ function HeroesSpawnedOnce(hero, player)
 	hero:AddNewModifier(nil, nil, "modifier_invulnerable", nil)
 	PlayerCurrHeroes[plId] = hero:GetUnitName()
 	Players_state[plId] = 1
-	--print("[JUNGLERACE] Player("..plId..") ONCE spawned")
+
+	print("[JUNGLERACE] Player "..plId.." spawned hero")
 	--MusicPlayer:AttachMusicPlayer( player )
 	--player:PlayMusic()
 	
@@ -33,6 +35,17 @@ function WaitRoundStarted()
 		return
 	end
 	RoundStarted = true
+
+	--Init points
+	SpawnPoints[1] = Entities:FindByName( nil, "SpawnLap1" ):GetAbsOrigin()
+	SpawnPoints[2] = Entities:FindByName( nil, "SpawnLap2" ):GetAbsOrigin()
+
+	FinishPoints[1] = Entities:FindByName( nil, "FirstPlace" ):GetAbsOrigin()
+	FinishPoints[2] = Entities:FindByName( nil, "SecondPlace" ):GetAbsOrigin()
+	FinishPoints[3] = Entities:FindByName( nil, "ThirdPlace" ):GetAbsOrigin()
+	----------------------------------
+
+	gmMiranaPudgeInGameInit()
 	
 	CountingPlayersVotes()
 	
@@ -68,14 +81,19 @@ function WaitRoundStarted()
 			ChatKillMessage("2...")
 			Timers:CreateTimer(1, function()
 				ChatKillMessage("1...")
-
-				if DEBUG then
-					deb_create_enemies()
-				end
 			end)
 		end)
     end)
 	Timers:CreateTimer(10, GameRoundStarted)
+	
+	
+	Convars:RegisterCommand( "PlayerSelectedHero", function(name)
+		local cmdPlayer = Convars:GetCommandClient()
+		--print("11111111111Player id = "..cmdPlayer:GetPlayerID())
+		if GameStarted and CurrentPlayerUnit[cmdPlayer:GetPlayerID()] == nil then
+			CreateNewHero(cmdPlayer)
+		end
+	end, "", 0 )
 end
 
 
@@ -83,37 +101,21 @@ function GameRoundStarted()
 	print("[JUNGLERACE] Game started")
 	ChatKillMessage("Game started!")
 	
+	GameStarted = true
+
 	for i = 0, MAXIMUM_PLAYERS do
 		if PlayerCurrHeroes[i] ~= nil then --todo заменить на проверку онлайна
 			CreateNewHero(PlayerResource:GetPlayer(i))
-			XP_PER_LEVEL_TABLE = {}
-			for i=1,100, 1 do
-			  if i <= 5 then
-			  	XP_PER_LEVEL_TABLE[i] = ((i-1)*(120+(i-1)*(120))/2)
-			  elseif i <= 15 then
-			  	XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+(120*5)+(i-5)*500
-			  elseif i <= 25 then
-			  	XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+(120*5)+(500*10)+(i-15)*2000
-			  elseif i <= 35 then
-			  	XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+(120*5)+(500*10)+(2000*10)+(i-25)*3000
-			  elseif i <= 50 then
-			  	XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+(120*5)+(500*10)+(2000*10)+(3000*15)+(i-35)*10000
-			  elseif i <= 60 then
-			  	XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+(120*5)+(500*10)+(2000*10)+(3000*15)+(10000*10)+(i-50)*15000
-			  elseif i <= 70 then
-			  	XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+(120*5)+(500*10)+(2000*10)+(3000*15)+(10000*10)+(15000*10)+(i-60)*25000
-			  elseif i <= 80 then
-			  	XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+(120*5)+(500*10)+(2000*10)+(3000*15)+(10000*10)+(15000*10)+(25000*10)+(i-70)*35000
-			  elseif i <= 90 then
-			  	XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+(120*5)+(500*10)+(2000*10)+(3000*15)+(10000*10)+(15000*10)+(25000*10)+(35000*10)+(i-80)*50000
-			  	print(i.."====="..XP_PER_LEVEL_TABLE[i])
-			  elseif i <= 100 then
-			  	XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+(120*5)+(500*10)+(2000*10)+(3000*15)+(10000*10)+(15000*10)+(25000*10)+(35000*10)+(50000*10)+(i-90)*100000
-			  end
-			  --CustomNetTables:SetTableValue("xp_table", tostring(i), {xpNeeded = XP_PER_LEVEL_TABLE[i]} )
-			end
 		end
     end
+
+    --------------------
+    gmMiranaPudgeGameStarted()
+    --------------------
+
+    if DEBUG then
+		deb_create_enemies()
+	end
 end
 
 

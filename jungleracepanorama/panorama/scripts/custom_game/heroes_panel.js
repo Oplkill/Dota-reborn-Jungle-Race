@@ -20,12 +20,6 @@ function OnButtonPressed( data ) {
 	//Game.ServerCmd("PanelHeroClicked " + iPlayerID + " " + data);
 }
 
-function UpdateLap( table )
-{
-	players[table.id].laps = table.laps;
-	pl_UIs[players[table.id].panelid].laps.text = table.laps;
-}
-
 function InitPlayer( table )
 {
 	var panId = players[table.id].panelid;
@@ -38,6 +32,28 @@ function InitPlayer( table )
 		pl_UIs[panId].teamicon.AddClass('TeamIconPlayer'+table.teamid);
 		pl_UIs[panId].colorline.AddClass('ColorLinePlayer'+table.teamid);
 	}
+}
+
+function UpdateAll(  )
+{
+	for ( var i = 0; i < 10; i++)
+	{
+		var table = {
+			id: 			i,
+			laps: 			players[i].laps,
+			heroname:		players[i].heroname,
+			heroentindex:	players[i].heroentindex
+		}
+		
+		UpdateHero(table);
+		UpdateLap(table);
+	}
+}
+
+function UpdateLap( table )
+{
+	players[table.id].laps = table.laps;
+	pl_UIs[players[table.id].panelid].laps.text = table.laps;
 }
 
 function UpdateHero( table )
@@ -75,21 +91,34 @@ function InitVariables( )
 			heroname: 		"",
 			laps: 			0,
 			playing: 		false,
-			diconnected: 	false,
+			disconnected: 	false,
 			heroentindex: 	0
 		}
 	}
 }
 
-function PlayerReDisConnected( table )
+function PlayerDisconnected( table )
 {
-	
+	players[table.id].disconnected = true;
+	var table2 = {
+		id:				table.id,
+		heroentindex: 	0,
+		heroname:		"leavedgame"
+	}
+	UpdateHero(table2);
+}
+
+function PlayerReconnected( table )
+{
+	players[table.id].disconnected = false;
+	UpdateAll()
 }
 
 (function () {
 	GameEvents.Subscribe( "jr_player_reach_end", UpdateLap );
 	GameEvents.Subscribe( "jr_init_player", InitPlayer );
 	GameEvents.Subscribe( "jr_update_hero", UpdateHero );
-	GameEvents.Subscribe( "jr_player_re_dis_connected", PlayerReDisConnected );
+	GameEvents.Subscribe( "jr_player_reconnected", PlayerReconnected );
+	GameEvents.Subscribe( "jr_player_disconnected", PlayerDisconnected );
 	InitVariables();
 })();

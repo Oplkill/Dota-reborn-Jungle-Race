@@ -5,6 +5,18 @@
 	</styles> 
 	<script>
 
+		function OnToggleMiranaPudge()
+		{
+			var playerInfo = Game.GetLocalPlayerInfo();
+			if ( !playerInfo )
+			{
+				$('#MiranaPudgeButton').checked = !$('#MiranaPudgeButton').checked;
+				return;
+			}
+			$.Msg("MiranaPudge: ", $('#MiranaPudgeButton').checked);
+			GameEvents.SendCustomGameEventToServer( "gamemode_check", { "gamemode":"MiranaPudge", "checked":$('#MiranaPudgeButton').checked } );
+		}
+
 		function OnVoteButtonPressed(category, vote)
 		{
 			$.Msg("Category: ", category);
@@ -12,7 +24,6 @@
 			GameEvents.SendCustomGameEventToServer( "setting_vote", { "category":category, "vote":vote } );
 		}
 
-		// This function is called at the start
 		(function() {
 			if (GameUI.CustomUIConfig().DebugMessagesEnabled == true)
 			{
@@ -29,8 +40,22 @@
 		<Panel class="CustomSettingsColumn" hittest="false" >
 			<Panel class="ContainerCustomGameSettingsPanels" hittest="false" >
 
-				<Panel class="ContainerCustomGameSettingsTitle" hittest="false" >
+				<!--<Panel class="ContainerCustomGameSettingsTitle" hittest="false" >
 					<Label class="CustomGameSettingsHeaderTitle" text="Custom Game Settings" hittest="false" />
+				</Panel>-->
+
+				<Panel class="CustomSettingPanel" hittest="false">
+
+					<Panel class="ContainerCustomGameLengthTitle" hittest="false">
+						<Label class="CustomGameSettingsTitle" id="CustomGameLengthTitle2" hittest="false" text="GameModes (for host)" />
+					</Panel>
+
+					<Panel class="CustomGameSettingPanelDivider" hittest="false" />
+					<Panel class="ContainerCustomGameSettingOptions" hittest="false">
+						
+						<ToggleButton id="MiranaPudgeButton" checked="false" text="Mirana and Pudge" onactivate="OnToggleMiranaPudge()" />
+
+					</Panel>
 				</Panel>
 
 				<Panel class="CustomSettingPanel" hittest="false">

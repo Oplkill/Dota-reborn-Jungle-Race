@@ -6,13 +6,16 @@ function SomeUnitDied(unit)
 	--local pl = unit:GetPlayerOwner()
 	--local plId = pl:GetPlayerID()
 	local plId = PlayerIdByTeam[unit:GetTeamNumber()]
-
+	
 	--print("--------------------------------Some unit died plId="..plId)
 	
 	--if unit:GetUnitName() == "unit_phoenix" then
 	if unit:HasAbility("phoenix_supernova") then
 		Phoenix_died(unit, plId)
 	else
+		if (plId ~= nil) then
+			CurrentPlayerUnit[plId] = nil
+		end
 		ContinueCreateUnit(unit, plId)
 	end
 
@@ -45,6 +48,9 @@ function Phoenix_died( unit, plId )
 			unit:CastAbilityNoTarget(abil, plId)
 		end)
 	else
+		if (plId ~= nil) then
+			CurrentPlayerUnit[plId] = nil
+		end
 		ContinueCreateUnit(unit, plId)
 	end
 end

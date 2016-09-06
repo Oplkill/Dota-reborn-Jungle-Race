@@ -23,7 +23,7 @@ function GameMode:_InitGameMode()
   GameRules:SetFirstBloodActive( ENABLE_FIRST_BLOOD )
   GameRules:SetHideKillMessageHeaders( true )
 
-
+	
   -- This is multiteam configuration stuff
   if USE_AUTOMATIC_PLAYERS_PER_TEAM then
     local num = math.floor(10 / MAX_NUMBER_OF_TEAMS)
@@ -38,6 +38,7 @@ function GameMode:_InitGameMode()
     end
   else
     local count = 0
+	
     for team,number in pairs(CUSTOM_TEAM_PLAYER_COUNT) do
       if count >= MAX_NUMBER_OF_TEAMS then
         GameRules:SetCustomGameTeamMaxPlayers(team, 0)
@@ -46,8 +47,10 @@ function GameMode:_InitGameMode()
       end
       count = count + 1
     end
+	
   end
-
+	
+	
   if USE_CUSTOM_TEAM_COLORS then
     for team,color in pairs(TEAM_COLORS) do
       SetTeamCustomHealthbarColor(team, color[1], color[2], color[3])
@@ -61,44 +64,45 @@ function GameMode:_InitGameMode()
   -- All of these events can potentially be fired by the game, though only the uncommented ones have had
   -- Functions supplied for them.  If you are interested in the other events, you can uncomment the
   -- ListenToGameEvent line and add a function to handle the event
-  ListenToGameEvent('dota_player_gained_level', Dynamic_Wrap(GameMode, 'OnPlayerLevelUp'), self)
-  ListenToGameEvent('dota_ability_channel_finished', Dynamic_Wrap(GameMode, 'OnAbilityChannelFinished'), self)
-  ListenToGameEvent('dota_player_learned_ability', Dynamic_Wrap(GameMode, 'OnPlayerLearnedAbility'), self)
-  ListenToGameEvent('entity_killed', Dynamic_Wrap(GameMode, 'OnEntityKilled'), self)
-  ListenToGameEvent('player_connect_full', Dynamic_Wrap(GameMode, 'OnConnectFull'), self)
-  ListenToGameEvent('player_disconnect', Dynamic_Wrap(GameMode, 'OnDisconnect'), self)
-  ListenToGameEvent('dota_item_purchased', Dynamic_Wrap(GameMode, 'OnItemPurchased'), self)
-  ListenToGameEvent('dota_item_picked_up', Dynamic_Wrap(GameMode, 'OnItemPickedUp'), self)
-  ListenToGameEvent('last_hit', Dynamic_Wrap(GameMode, 'OnLastHit'), self)
-  ListenToGameEvent('dota_non_player_used_ability', Dynamic_Wrap(GameMode, 'OnNonPlayerUsedAbility'), self)
-  ListenToGameEvent('player_changename', Dynamic_Wrap(GameMode, 'OnPlayerChangedName'), self)
-  ListenToGameEvent('dota_rune_activated_server', Dynamic_Wrap(GameMode, 'OnRuneActivated'), self)
-  ListenToGameEvent('dota_player_take_tower_damage', Dynamic_Wrap(GameMode, 'OnPlayerTakeTowerDamage'), self)
-  ListenToGameEvent('tree_cut', Dynamic_Wrap(GameMode, 'OnTreeCut'), self)
-  ListenToGameEvent('entity_hurt', Dynamic_Wrap(GameMode, 'OnEntityHurt'), self)
-  ListenToGameEvent('player_connect', Dynamic_Wrap(GameMode, 'PlayerConnect'), self)
-  ListenToGameEvent('dota_player_used_ability', Dynamic_Wrap(GameMode, 'OnAbilityUsed'), self)
-  ListenToGameEvent('game_rules_state_change', Dynamic_Wrap(GameMode, 'OnGameRulesStateChange'), self)
-  ListenToGameEvent('npc_spawned', Dynamic_Wrap(GameMode, 'OnNPCSpawned'), self)
-  ListenToGameEvent('dota_player_pick_hero', Dynamic_Wrap(GameMode, 'OnPlayerPickHero'), self)
-  ListenToGameEvent('dota_team_kill_credit', Dynamic_Wrap(GameMode, 'OnTeamKillCredit'), self)
-  ListenToGameEvent("player_reconnected", Dynamic_Wrap(GameMode, 'OnPlayerReconnect'), self)
-
-  ListenToGameEvent("dota_illusions_created", Dynamic_Wrap(GameMode, 'OnIllusionsCreated'), self)
-  ListenToGameEvent("dota_item_combined", Dynamic_Wrap(GameMode, 'OnItemCombined'), self)
-  ListenToGameEvent("dota_player_begin_cast", Dynamic_Wrap(GameMode, 'OnAbilityCastBegins'), self)
-  ListenToGameEvent("dota_tower_kill", Dynamic_Wrap(GameMode, 'OnTowerKill'), self)
-  ListenToGameEvent("dota_player_selected_custom_team", Dynamic_Wrap(GameMode, 'OnPlayerSelectedCustomTeam'), self)
-  ListenToGameEvent("dota_npc_goal_reached", Dynamic_Wrap(GameMode, 'OnNPCGoalReached'), self)
-
-  ListenToGameEvent("player_chat", Dynamic_Wrap(GameMode, 'OnPlayerChat'), self)
   
+  
+  ListenToGameEvent('dota_player_gained_level',       Dynamic_Wrap(GameMode, 'OnPlayerLevelUp'), self)
+  ListenToGameEvent('dota_ability_channel_finished',  Dynamic_Wrap(GameMode, 'OnAbilityChannelFinished'), self)
+  ListenToGameEvent('dota_player_learned_ability',    Dynamic_Wrap(GameMode, 'OnPlayerLearnedAbility'), self)
+  ListenToGameEvent('entity_killed',                  Dynamic_Wrap(GameMode, 'OnEntityKilled'), self)
+  
+  
+  --[[todoOplkill
+  ListenToGameEvent('player_connect_full',            Dynamic_Wrap(GameMode, 'OnConnectFull'), self)
+  ]]
+  ListenToGameEvent('player_disconnect',              Dynamic_Wrap(GameMode, 'OnDisconnect'), self)
+  
+  
+  ListenToGameEvent('dota_item_purchased',            Dynamic_Wrap(GameMode, 'OnItemPurchased'), self)
+  ListenToGameEvent('dota_item_picked_up',            Dynamic_Wrap(GameMode, 'OnItemPickedUp'), self)
+  ListenToGameEvent('dota_non_player_used_ability',   Dynamic_Wrap(GameMode, 'OnNonPlayerUsedAbility'), self)
+  ListenToGameEvent('player_changename',              Dynamic_Wrap(GameMode, 'OnPlayerChangedName'), self)
+  ListenToGameEvent('dota_rune_activated_server',     Dynamic_Wrap(GameMode, 'OnRuneActivated'), self)
+  ListenToGameEvent('tree_cut',                       Dynamic_Wrap(GameMode, 'OnTreeCut'), self)
+  ListenToGameEvent('entity_hurt',                    Dynamic_Wrap(GameMode, 'OnEntityHurt'), self)
+  ListenToGameEvent('player_connect',                 Dynamic_Wrap(GameMode, 'PlayerConnect'), self)
+  ListenToGameEvent('dota_player_used_ability',       Dynamic_Wrap(GameMode, 'OnAbilityUsed'), self)
+  ListenToGameEvent('npc_spawned',                    Dynamic_Wrap(GameMode, 'OnNPCSpawned'), self)
+  ListenToGameEvent('dota_player_pick_hero',          Dynamic_Wrap(GameMode, 'OnPlayerPickHero'), self)
+  ListenToGameEvent("player_reconnected",             Dynamic_Wrap(GameMode, 'OnPlayerReconnect'), self)
+  ListenToGameEvent("dota_player_begin_cast",         Dynamic_Wrap(GameMode, 'OnAbilityCastBegins'), self)
+
+  ListenToGameEvent("player_chat",                    Dynamic_Wrap(GameMode, 'OnPlayerChat'), self)
+  
+  ListenToGameEvent("dota_player_update_hero_selection",  Dynamic_Wrap(GameMode, 'On_dota_player_update_hero_selection'), self)
+  ListenToGameEvent("dota_player_update_selected_unit",   Dynamic_Wrap(GameMode, 'On_dota_player_update_selected_unit'), self)
   
   --ListenToGameEvent("dota_player_update_hero_selection", Dynamic_Wrap(GameMode, 'On_dota_player_update_hero_selection'), self)
   --ListenToGameEvent("dota_player_update_selected_unit", Dynamic_Wrap(GameMode, 'On_dota_player_update_selected_unit'), self)
   
   
-  CustomGameEventManager:RegisterListener( "setting_vote", Dynamic_Wrap(GameMode, "OnSettingVote"))
+  CustomGameEventManager:RegisterListener( "setting_vote",    Dynamic_Wrap(GameMode, "OnSettingVote"))
+  CustomGameEventManager:RegisterListener( "gamemode_check",  Dynamic_Wrap(GameMode, "OnGameModeChecked"))
   
   --ListenToGameEvent("dota_tutorial_shop_toggled", Dynamic_Wrap(GameMode, 'OnShopToggled'), self)
 
@@ -118,6 +122,10 @@ function GameMode:_InitGameMode()
       GameMode:StartEventTest()
     end, "events test", 0)]]
 
+	
+
+	
+	
   local spew = 0
   if BAREBONES_DEBUG_SPEW then
     spew = 1
@@ -133,12 +141,10 @@ function GameMode:_InitGameMode()
   self.vUserIds = {}
 
   DebugPrint('[BAREBONES] Done loading Barebones gamemode!\n\n')
-end
+  
+  
+  DebugPrint('[BAREBONES] Start loading game mode settings!\n\n')
 
-mode = nil
-
--- This function is called as the first player loads and sets up the GameMode parameters
-function GameMode:_CaptureGameMode()
   if mode == nil then
     -- Set GameMode parameters
     mode = GameRules:GetGameModeEntity()        
@@ -147,11 +153,12 @@ function GameMode:_CaptureGameMode()
     mode:SetCustomBuybackCostEnabled( CUSTOM_BUYBACK_COST_ENABLED )
     mode:SetCustomBuybackCooldownEnabled( CUSTOM_BUYBACK_COOLDOWN_ENABLED )
     mode:SetBuybackEnabled( BUYBACK_ENABLED )
+	
     mode:SetTopBarTeamValuesOverride ( USE_CUSTOM_TOP_BAR_VALUES )
     mode:SetTopBarTeamValuesVisible( TOP_BAR_VISIBLE )
-    mode:SetUseCustomHeroLevels ( USE_CUSTOM_HERO_LEVELS )
-    mode:SetCustomHeroMaxLevel ( MAX_LEVEL )
-    mode:SetCustomXPRequiredToReachNextLevel( XP_PER_LEVEL_TABLE )
+    --mode:SetUseCustomHeroLevels ( USE_CUSTOM_HERO_LEVELS )
+    --mode:SetCustomHeroMaxLevel ( MAX_LEVEL )
+    --mode:SetCustomXPRequiredToReachNextLevel( XP_PER_LEVEL_TABLE )
 
     mode:SetBotThinkingEnabled( USE_STANDARD_DOTA_BOT_THINKING )
     mode:SetTowerBackdoorProtectionEnabled( ENABLE_TOWER_BACKDOOR_PROTECTION )
@@ -179,7 +186,104 @@ function GameMode:_CaptureGameMode()
     end
 
     mode:SetUnseenFogOfWarEnabled(USE_UNSEEN_FOG_OF_WAR)
-
+	
+	GameRules:GetGameModeEntity():SetExecuteOrderFilter(GameMode.FilterExecuteOrder, self)
+	
+	DebugPrint('[BAREBONES] Success!\n\n')
     self:OnFirstPlayerLoaded()
   end 
+  
+  DebugPrint('[BAREBONES] End load game settings!\n\n')
+end
+
+mode = nil
+
+function GameMode:FilterExecuteOrder(filterTable)
+  --[[
+  for k, v in pairs(filterTable) do -- стандартный способ вывода таблицы через key/value.
+    print(k, v)
+  end
+  ]]
+  local units_table = filterTable["units"]
+  --DebugPrintTable(units_table)
+  --print("[DEBUG] Order - "..filterTable["order_type"])
+  if filterTable["order_type"] == 6 or
+     filterTable["order_type"] == 5 or
+     filterTable["order_type"] == 8 or
+     filterTable["order_type"] == 9 or
+     filterTable["order_type"] == 7 then
+    --print("[DEBUG] Okay order fits")
+    local caster = EntIndexToHScript(units_table["0"])
+    if caster ~= nil then
+      --print("[DEBUG] Okay caster is not null")
+      if caster:HasModifier("modifier_last_word_effect") then
+        --print("[DEBUG] Good caster has modifier!")
+        local modidier = caster:FindModifierByName("modifier_last_word_effect")
+        local abilityModifier = modidier:GetAbility()
+        local Duration = abilityModifier:GetLevelSpecialValueFor("stun_duration", 0)
+        if caster:HasAbility("last_word") or caster:GetUnitName() == "unit_yoba" then
+          Duration = Duration * 2
+        end
+        caster:RemoveModifierByName("modifier_last_word_effect")
+        caster:AddNewModifier(caster, nil, "modifier_stunned", {duration = Duration})
+        return false
+      end
+    end
+    
+    
+  end
+  return true -- разрешаем герою произвести действие по приказу.
+end
+
+-- This function is called as the first player loads and sets up the GameMode parameters
+function GameMode:_CaptureGameMode()
+	DebugPrint('[BAREBONES] Start loading game mode settings!\n\n')
+
+  if mode == nil then
+    -- Set GameMode parameters
+    mode = GameRules:GetGameModeEntity()        
+    mode:SetRecommendedItemsDisabled( RECOMMENDED_BUILDS_DISABLED )
+    mode:SetCameraDistanceOverride( CAMERA_DISTANCE_OVERRIDE )
+    mode:SetCustomBuybackCostEnabled( CUSTOM_BUYBACK_COST_ENABLED )
+    mode:SetCustomBuybackCooldownEnabled( CUSTOM_BUYBACK_COOLDOWN_ENABLED )
+    mode:SetBuybackEnabled( BUYBACK_ENABLED )
+    mode:SetTopBarTeamValuesOverride ( USE_CUSTOM_TOP_BAR_VALUES )
+    mode:SetTopBarTeamValuesVisible( TOP_BAR_VISIBLE )
+    mode:SetUseCustomHeroLevels ( USE_CUSTOM_HERO_LEVELS )
+    mode:SetCustomHeroMaxLevel ( MAX_LEVEL )
+    mode:SetCustomXPRequiredToReachNextLevel( XP_PER_LEVEL_TABLE )
+
+    mode:SetBotThinkingEnabled( USE_STANDARD_DOTA_BOT_THINKING )
+    mode:SetTowerBackdoorProtectionEnabled( ENABLE_TOWER_BACKDOOR_PROTECTION )
+
+    --mode:SetFogOfWarDisabled(DISABLE_FOG_OF_WAR_ENTIRELY)
+	mode:SetFogOfWarDisabled(true)
+    mode:SetGoldSoundDisabled( DISABLE_GOLD_SOUNDS )
+    mode:SetRemoveIllusionsOnDeath( REMOVE_ILLUSIONS_ON_DEATH )
+
+    mode:SetAlwaysShowPlayerInventory( SHOW_ONLY_PLAYER_INVENTORY )
+    mode:SetAnnouncerDisabled( true )
+    if FORCE_PICKED_HERO ~= nil then
+      mode:SetCustomGameForceHero( FORCE_PICKED_HERO )
+    end
+    mode:SetFixedRespawnTime( FIXED_RESPAWN_TIME ) 
+    mode:SetFountainConstantManaRegen( FOUNTAIN_CONSTANT_MANA_REGEN )
+    mode:SetFountainPercentageHealthRegen( FOUNTAIN_PERCENTAGE_HEALTH_REGEN )
+    mode:SetFountainPercentageManaRegen( FOUNTAIN_PERCENTAGE_MANA_REGEN )
+    mode:SetLoseGoldOnDeath( false )
+    mode:SetMaximumAttackSpeed( MAXIMUM_ATTACK_SPEED )
+    mode:SetMinimumAttackSpeed( MINIMUM_ATTACK_SPEED )
+    mode:SetStashPurchasingDisabled ( DISABLE_STASH_PURCHASING )
+
+    for rune, spawn in pairs(ENABLED_RUNES) do
+      mode:SetRuneEnabled(rune, spawn)
+    end
+
+    mode:SetUnseenFogOfWarEnabled(USE_UNSEEN_FOG_OF_WAR)
+	
+	DebugPrint('[BAREBONES] Success!\n\n')
+    self:OnFirstPlayerLoaded()
+  end 
+  
+  DebugPrint('[BAREBONES] End load game settings!\n\n')
 end

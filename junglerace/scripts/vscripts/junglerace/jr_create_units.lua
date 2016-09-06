@@ -11,6 +11,7 @@ function CreateNewHero(player)
 	end
 	
 	local pl_id = player:GetPlayerID()
+	--local pl_id = PlayerIdByTeam[]
 	local point = nil
 	--print("[DEBUG] plId = "..pl_id)
 
@@ -19,9 +20,9 @@ function CreateNewHero(player)
 	end
 	
 	if Player_Half_Lap[pl_id] then
-		point = Entities:FindByName( nil, "SpawnLap2"):GetAbsOrigin()
+		point = SpawnPoints[2]
 	else
-		point = Entities:FindByName( nil, "SpawnLap1"):GetAbsOrigin()
+		point = SpawnPoints[1]
 	end
 	
 	local randomUnitId = TESTCHOOSEHERO
@@ -38,8 +39,10 @@ function CreateNewHero(player)
 	Timers:CreateTimer(0.1, function()
 			PlayerResource:SetCameraTarget(pl_id, nil)
 		end)
-
-    CustomGameEventManager:Send_ServerToPlayer(player, "add_to_selection", { ent_index = unitnew:GetEntityIndex() })
+	--print("11111111111Player id = "..pl_id)
+	CurrentPlayerUnit[pl_id] = unitnew
+	
+    CustomGameEventManager:Send_ServerToPlayer(player, "add_to_selection", { ent_index = unitnew:GetEntityIndex(), playerId = pl_id})
 
 	--print('[JungleRace] Created new hero ----------------------------'..newUnitClass)
 	PlayerCurrHeroes[pl_id] = unitnew:GetUnitName()

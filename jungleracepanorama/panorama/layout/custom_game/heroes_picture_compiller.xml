@@ -127,5 +127,6 @@
 		<Image class="heroPd" src="file://{resources}/images/heroes/zuus.png" />
 		<Image class="heroPd" src="file://{resources}/images/heroes/chilli_willy.png" />
 		<Image class="heroPd" src="file://{resources}/images/heroes/stuped_sheep.png" />
+		<Image class="heroPd" src="file://{resources}/images/heroes/leavedgame.png" />
 	</Panel>
 </root>

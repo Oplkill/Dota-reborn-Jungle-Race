@@ -43,6 +43,19 @@
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_6] = "file://{images}/custom_game/team_icons/team_icon_boar_01.png";
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_7] = "file://{images}/custom_game/team_icons/team_icon_snake_01.png";
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_8] = "file://{images}/custom_game/team_icons/team_icon_horse_01.png";
+		
+		$.RegisterKeyBind($.GetContextPanel(), "key_f1", function() {
+			$.Msg("F1 pressed");
+		});
+		$.RegisterKeyBind($.GetContextPanel(), "key_A", function() {
+			$.Msg("A pressed");
+		});
+		$.RegisterKeyBind($.GetContextPanel(), "key_B", function() {
+			$.Msg("B pressed");
+		});
+		$.RegisterKeyBind($.GetContextPanel(), "key_up,key_down,key_left,key_right", function(test,test2,test3) {
+			$.Msg("Pressed");
+		});
 	</script>
 		
 	<Panel>

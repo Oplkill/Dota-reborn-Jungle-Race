@@ -1,13 +1,37 @@
 "DOTAAbilities"
 {
-    "Version"       "1"
-	
 	//=============================
 	// "-" - dont working	(Не работает)
 	// "+" - working		(работает)
 	// "&" - using			(используется)
 	// "?" - not tested		(не тестировано)
 	//=============================
+
+	"dummy_unit"
+	{
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"rubick_empty1"
+		"MaxLevel"	"1"
+		"Modifiers"
+		{
+			"dummy_unit"
+			{
+				"Passive"	"1"
+				"States"
+				{
+					"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION" "MODIFIER_STATE_VALUE_ENABLED"
+				}
+
+			}
+
+		}
+
+	}
 
 	//=================================================================================================================
 	// Queen of Pain: Shadow Strike (Прицеливание) +&
@@ -120,7 +144,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP"
-		"AbilityTextureName"			"doom_bringer_doom"
+		"AbilityTextureName"			"greevil_purification"
 		"MaxLevel"               		"1"
 
 		"Modifiers"
@@ -412,6 +436,7 @@
 		"AbilityUnitTargetType" 		"DOTA_UNIT_TARGET_CREEP"
 		"AbilityUnitTargetFlags" 		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 		"AbilityUnitDamageType" 		"DAMAGE_TYPE_MAGICAL"
+		"AbilityTextureName"      		"alchemist_goblins_greed"
 		"MaxLevel"      				"1"
 		
 		"AbilityCastRange"				"650"
@@ -444,7 +469,7 @@
 		"BaseClass"               "ability_datadriven"
 		"AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_BOTH"
-		"AbilityTextureName"      "huskar_life_break"
+		"AbilityTextureName"      "jakiro_ice_path"
 	
 		"MaxLevel"               "1"
 		"RequiredLevel"          "0"
@@ -905,7 +930,7 @@
 		"BaseClass"               "ability_datadriven"
 		"AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_BOTH"
-		"AbilityTextureName"      "huskar_life_break"
+		"AbilityTextureName"      "courier_burst"
 	
 		"MaxLevel"               "1"
 		"RequiredLevel"          "0"
@@ -1928,7 +1953,7 @@
 		"BaseClass"               "ability_datadriven"
 		"AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_BOTH"
-		"AbilityTextureName"      "huskar_life_break"
+		"AbilityTextureName"      "lone_druid_spirit_bear_entangle"
 	
 		"MaxLevel"               "1"
 		"RequiredLevel"          "0"
@@ -2017,7 +2042,7 @@
 	}
 
 	//=================================================================================================================
-	// Ability: spell steal (тырит спел врага) +
+	// Ability: spell steal (тырит спел врага) +&
 	//=================================================================================================================
 	"rubick_spell_steal_datadriven"
 	{
@@ -2047,6 +2072,201 @@
 			}	
 		}
 	}	
+
+	//=================================================================================================================
+	// leshrac_wall: Wall (стена) +&
+	//=================================================================================================================
+	"leshrac_wall"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName" 			"magic_wall"
+		"MaxLevel"				 		"1"  
+		"AbilityCastPoint"				"0.4"
+		"AbilityCastRange"				"800"
+		"AbilityCooldown"				"7"
+		"AbilityManaCost"				"1"
+
+		"precache"
+		{
+			"particle"  "particles/units/heroes/hero_dark_seer/leshrac_wallof_replica.vpcf"
+			"particle"	"particles/econ/items/antimage/antimage_weapon_basher_ti5/leshrac_wall_burn.vpcf"
+			"particle"	"particles/items_fx/leshrac_wall_beam.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_luna.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_death_prophet.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"8"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"wall_length"			"700"
+			}
+		}
+		"OnAbilityPhaseStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"abilities/leshrac_wall.lua"
+				"Function"		"castAnimation"
+			}
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+        		"ScriptFile"	"abilities/leshrac_wall.lua"
+        		"Function"		"createWall"
+        		"wallLength"	"%wall_length"
+        		"duration"		"%duration"
+        		"Target"		"POINT"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_charge_of_light_hyper_state"
+			{
+				"IsBuff" "1"
+				"IsHidden"	"0"
+				"IsPurgable"		"0"
+				"StatusEffectName" 		"particles/status_fx/status_effect_hyper_state.vpcf"
+				"StatusEffectPriority"  "20"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "15"
+				    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "10" 
+				}
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"Target"					"TARGET"
+						"EffectName"				"particles/frostivus_herofx/hyper_state_intro_omnislash_ascension.vpcf"
+						"EffectAttachType"			"attach_origin"
+						"EffectLifeDurationScale"	"1"
+						"EffectColorA"				"255 255 255"
+						"EffectAlphaScale"			"1"
+					}
+				}		
+			}
+			"modifier_charge_of_light_hyper_state_cooldown"
+			{
+				"IsBuff" "1"
+				"IsHidden"	"1"
+				"IsPurgable"		"0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// leshrac_blink: leshrac blink (Телепорт домой) +&
+	//=================================================================================================================
+	"leshrac_blink"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityTextureName"			"keeper_of_the_light_chakra_magic"
+		"MaxLevel"				 		"1"   
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"9"
+		"AbilityManaCost"				"0"
+		"AbilityChannelTime" 			"0.3"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"			"6.5"
+			}
+		}
+
+		"precache"
+		{
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+			"particle"					"particles/econ/items/meepo/meepo_colossal_crystal_chorus/sorceress_blink.vpcf"
+			"particle"					"particles/items_fx/leshrac_blink.vpcf"
+			"soundfile"					"items/hotd.wav"
+			"particle"					"particles/econ/items/sven/sven_cyclopean_marauder/leshrac_grow_effect.vpcf"
+			"particle"					"particles/econ/items/sven/sven_cyclopean_marauder/leshrac_shrink_effect.vpcf"
+			"particle"					"particles/units/heroes/hero_skywrath_mage/leshrac_rune_b_c_arcane_bolt.vpcf"
+			"particle"					"particles/units/heroes/hero_leshrac/bahamut_nova.vpcf"
+			"particle"					"particles/units/heroes/hero_leshrac/bahamut_nova_strike.vpcf"
+		}
+		
+		"OnChannelFinish"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_sorceress_blink_datadriven"
+				"Target"		"CASTER"
+			}
+			"DelayedAction"
+			{
+				"Delay"     "0.1"
+				"Action"    
+				{
+					"FireEffect"
+					{
+						"EffectName"		"particles/items_fx/leshrac_blink.vpcf"
+						"EffectAttachType"	"follow_overhead"
+						"Target"			"CASTER"
+					}
+				}
+			}
+
+
+		}
+		
+		"Modifiers"
+		{
+			"modifier_sorceress_blink_datadriven"
+			{
+				"Duration"		"6.5"				
+				"OnCreated"
+				{
+					
+					"RunScript"
+					{
+						"ScriptFile"		"abilities/leshrac_blink.lua"
+						"Function"			"HideCaster"
+						"duration"			"%duration"
+					}
+				}
+				
+				"OnDestroy"
+				{
+					
+					"RunScript"
+					{
+						"ScriptFile"		"abilities/leshrac_blink.lua"
+						"Function"			"ShowCaster"
+						"duration"			"%duration"
+					}
+				}
+				
+				"States"
+				{
+				
+					"MODIFIER_STATE_ATTACK_IMMUNE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MAGIC_IMMUNE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"				"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
 
 	//=================================================================================================================
 	//=================================================================================================================
@@ -2670,7 +2890,7 @@
 	}
 	
 	//=================================================================================================================
-	// Ability: Stun and Die (Стань и умри) -
+	// Ability: Stun and Die (Стань и умри) +
 	//=================================================================================================================
 	"live_and_die"
 	{
@@ -2679,7 +2899,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 		//"AbilityUnitTargetType" 		"DOTA_UNIT_TARGET_CREEP"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilityTextureName"			"necrolyte_heartstopper_aura"
+		"AbilityTextureName"			"techies_suicide"
 		"MaxLevel"               		"1"
 		"AbilityManaCost"				"0"
 		"AbilityCastRange"				"0"
@@ -2706,139 +2926,6 @@
 				"ScriptFile"			"abilities/liveanddie.lua"
 				"Function"				"LiveAndDie"
 			}
-			
-			"ApplyModifier"
-			{
-				"ModifierName"			"modifer_stun_all"
-				"Target" 
-				{
-					"Center"			"TARGET"
-					"Flags"				"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-				}
-				"Duration"				"%duration"
-			}
-		}
-		
-		"Modifiers"
-		{
-			"modifer_stun_all"
-			{
-				"Attributes"       "MODIFIER_ATTRIBUTE_MULTIPLE" 
-				"Duration"         "10"
-				"Passive"          "0"    
-				"TextureName"      "doom_bringer_doom"
-
-				"IsDebuff"         "1"
-				"IsHidden"         "0"
-				"IsPurgable"       "0"
-				"IsStunDebuff" 	   "true"
-				
-				"EffectName" "particles/generic_gameplay/generic_stunned_old.vpcf"
-				"EffectAttachType" "follow_origin"
-				"States"
-				{ 
-					"MODIFIER_STATE_STUNNED" "MODIFIER_STATE_VALUE_ENABLED"
-				}
-			}
-		}
-		
-	}
-
-	//=================================================================================================================
-	// leshrac_wall: Wall (стена) +
-	//=================================================================================================================
-	"leshrac_wall"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"FightRecapLevel"				"1"
-		"AbilityTextureName"			"leshrac_wall"
-		"RequiredLevel"          		"-5"
-		"LevelsBetweenUpgrades"  		"10"
-		"MaxLevel"				 		"1"  
-
-		"precache"
-		{
-			"particle"  "particles/units/heroes/hero_dark_seer/leshrac_wallof_replica.vpcf"
-			"particle"	"particles/econ/items/antimage/antimage_weapon_basher_ti5/leshrac_wall_burn.vpcf"
-			"particle"	"particles/items_fx/leshrac_wall_beam.vpcf"
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_luna.vsndevts"
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_death_prophet.vsndevts"
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
-		}
-
-		"AbilityCastPoint"				"0.4"
-		"AbilityCastRange"				"800"
-		"AbilityCooldown"				"4"
-		"AbilityManaCost"				"1"
-
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"duration"				"8"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"wall_length"			"800"
-			}
-		}
-		"OnAbilityPhaseStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"abilities/leshrac_wall.lua"
-				"Function"		"castAnimation"
-			}
-		}
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-        		"ScriptFile"	"abilities/leshrac_wall.lua"
-        		"Function"		"createWall"
-        		"wallLength"	"%wall_length"
-        		"duration"		"%duration"
-        		"Target"		"POINT"
-			}
-		}
-		"Modifiers"
-		{
-			"modifier_charge_of_light_hyper_state"
-			{
-				"IsBuff" "1"
-				"IsHidden"	"0"
-				"IsPurgable"		"0"
-				"StatusEffectName" 		"particles/status_fx/status_effect_hyper_state.vpcf"
-				"StatusEffectPriority"  "20"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "15"
-				    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "10" 
-				}
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"Target"					"TARGET"
-						"EffectName"				"particles/frostivus_herofx/hyper_state_intro_omnislash_ascension.vpcf"
-						"EffectAttachType"			"attach_origin"
-						"EffectLifeDurationScale"	"1"
-						"EffectColorA"				"255 255 255"
-						"EffectAlphaScale"			"1"
-					}
-				}		
-			}
-			"modifier_charge_of_light_hyper_state_cooldown"
-			{
-				"IsBuff" "1"
-				"IsHidden"	"1"
-				"IsPurgable"		"0"
-			}
 		}
 	}
 
@@ -2853,8 +2940,11 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"FightRecapLevel"				"2"
 		"AbilityTextureName"			"omniknight_degen_aura"
-		"LevelsBetweenUpgrades"  		"10"
-		"MaxLevel"				 		"1"  
+		"MaxLevel"				 		"1" 
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.35"
+		"AbilityCooldown"				"1"
+		"AbilityManaCost"				"0" 
 
 		"precache"
 		{
@@ -2867,14 +2957,7 @@
 			"particle"			"particles/units/heroes/hero_elder_titan/paladin_holy_nova.vpcf"
 			"particle"			"particles/units/heroes/hero_oracle/holy_heal_heal.vpcf"
 		}
-		
-		"AbilityCastRange"				"700"
-		"AbilityCastPoint"				"0.35"
-		"AbilityCooldown"				"1"
-		"AbilityManaCost"				"0"
 
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
 			"01"
@@ -2900,7 +2983,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stun_duration"			"3"
+				"stun_duration"		"3"
 			}
 		}
 
@@ -2995,4 +3078,540 @@
 
 
 	}
+
+	//=================================================================================================================
+	// mana leak (убавление маны при движении) +
+	//=================================================================================================================
+	"mage_mana_leak"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------					
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"venomancer_plague_ward"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"9"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"1"		
+
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"4"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"mana_leak_pct"				"0.15"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"6.0"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cast_range_tooltip"		"1000"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"leak_distantion"			"110"
+			}
+		}
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_mana_leak_effect"
+				"Target" 		"TARGET"
+				"Duration"		"%duration"
+			}
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_keeper_of_the_light/keeper_mana_leak.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "TARGET"
+			}
+			"FireSound"
+			{
+				"EffectName"	"Hero_KeeperOfTheLight.ManaLeak.Cast"
+				"Target" 		"CASTER"
+			}
+			"FireSound"
+			{
+				"EffectName"	"Hero_KeeperOfTheLight.ManaLeak.Target"
+				"Target" 		"TARGET"
+			}
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_keeper_of_the_light/keeper_mana_leak_cast.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "TARGET"
+				"ControlPointEntities"
+				{
+					"CASTER"	"attach_origin"
+					"TARGET"	"attach_origin"
+				}
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_mana_leak_effect"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"1"
+		
+				"ThinkInterval"  "0.3"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"abilities/mana_leak.lua"
+						"Function"		"mage_mana_leak_think"
+						"stun_duration"  "%stun_duration"
+						"leak_distantion"	"%leak_distantion"
+						"target"		"TARGET"
+					}
+				}
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// last word (станит врага если тут юзнул способность) +
+	//=================================================================================================================
+	"last_word"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------					
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"drow_ranger_silence"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"9"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"1"		
+
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1300"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"9"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"9.0"
+			}
+		}
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_last_word_effect"
+				"Target" 		"TARGET"
+				"Duration"		"%duration"
+			}
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_keeper_of_the_light/keeper_mana_leak.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "TARGET"
+			}
+			"FireSound"
+			{
+				"EffectName"	"Hero_KeeperOfTheLight.ManaLeak.Cast"
+				"Target" 		"CASTER"
+			}
+			"FireSound"
+			{
+				"EffectName"	"Hero_KeeperOfTheLight.ManaLeak.Target"
+				"Target" 		"TARGET"
+			}
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_keeper_of_the_light/keeper_mana_leak_cast.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "TARGET"
+				"ControlPointEntities"
+				{
+					"CASTER"	"attach_origin"
+					"TARGET"	"attach_origin"
+				}
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_last_word_effect"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"1"
+				"TextureName"      	"drow_ranger_silence"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Tiredness aura (Аура усталости) +
+	//=================================================================================================================
+	"tiredness_aura"
+	{
+		"BaseClass"               "ability_datadriven"
+		"AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityTextureName"      "treant_living_armor"
+	
+		"MaxLevel"               "1"
+		"RequiredLevel"          "0"
+		"LevelsBetweenUpgrades"  "0"
+	  	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"      		"FIELD_FLOAT"
+				"cooldown_multip_dur"   "2.0"
+			}
+			"02"
+			{
+				"var_type"      		"FIELD_INTEGER"
+				"radius"   				"3000"
+			}
+		}
+	
+		"OnRespawn"
+		{
+			"ApplyModifier"				"modifier_tiredness_aura"
+		}
+	  
+		"Modifiers"
+		{   
+			"modifier_tiredness_aura"
+			{
+				"Passive" 		"1" //Apply as soon as the spell is learned
+				"IsHidden"      "1" //Don't show the aura applier
+				//"IsBuff" 		"1"
+
+				"Aura"          "tiredness_aura_effect"
+				"Aura_Radius" 	"%radius"
+				"Aura_Teams"  	"DOTA_UNIT_TARGET_TEAM_BOTH"
+				"Aura_Types"  	"DOTA_UNIT_TARGET_CREEP"
+				"Aura_Flags"  	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+				"Aura_ApplyToCaster" "0"   // Not Apply to Self, default is 1
+			}
+
+			"tiredness_aura_effect"
+			{
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"abilities/tiredness.lua"
+						"Function"			"tiredness_used_ability"
+						"multip_cooldown"  "%cooldown_multip_dur"
+						"target"			"TARGET"
+					}
+				}
+			}
+		} 
+	}
+
+	//=================================================================================================================
+	// cancel all bufs (отменяет все бафы) ?
+	//=================================================================================================================
+	"cancel_bufs"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------					
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"keeper_of_the_light_illuminate"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"1"		
+
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"2600"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"      		"FIELD_FLOAT"
+				"duration_per_debuff"   "2.5"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"abilities/cancel_bufs.lua"
+				"Function"			"cancel_bufs"
+				"target"			"TARGET"
+				"caster"			"CASTER"
+			}
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_keeper_of_the_light/keeper_mana_leak.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"durPerDebuf"		"%duration_per_debuff"
+				"Target"            "TARGET"
+			}
+			"FireSound"
+			{
+				"EffectName"	"Hero_KeeperOfTheLight.ManaLeak.Cast"
+				"Target" 		"CASTER"
+			}
+			"FireSound"
+			{
+				"EffectName"	"Hero_KeeperOfTheLight.ManaLeak.Target"
+				"Target" 		"TARGET"
+			}
+		}
+		"Modifiers"
+		{ 
+			"modifier_cancel_buf_speed"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"0"
+				"TextureName"      	"windrunner_windrun"
+
+				"EffectName"		"Hero_KeeperOfTheLight.ManaLeak.Cast"
+				"EffectAttachType"	"follow_origin"
+		
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE" "45"
+				}
+			}
+		}
+	}
+
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+
+	//=================================================================================================================
+	// Ability: Hook (Хук мясняка) &+
+	//=================================================================================================================
+	"gm_pudge_hook"
+	{
+		"BaseClass"						"pudge_meat_hook"
+		"AbilityTextureName"			"pudge_meat_hook"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		//"ScriptFile"					"heroes/hero_pudge/pudge_meat_hook_lua.lua"	
+	
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
+			"particle"			"particles/units/heroes/hero_pudge/pudge_meathook_chain.vpcf"
+			"particle"			"particles/units/heroes/hero_pudge/pudge_meathook_impact.vpcf"
+			"particle"			"particles/units/heroes/hero_pudge/pudge_meathook.vpcf"
+		}
+		
+		"AbilityCastRange"				"30000"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"3"
+		"AbilityManaCost"				"0"
+		"MaxLevel"               		"1"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"hook_speed"		"1000.0"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hook_width"		"100"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hook_distance"		"30000"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"vision_radius"		"500"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"vision_duration"	"4.0"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"hook_followthrough_constant"			"0.65"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hook_damage"		"0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Mirana Arrow &+
+	//=================================================================================================================
+	"gm_mirana_arrow"
+	{
+		"BaseClass"						"ability_datadriven"
+		"MaxLevel"          			"1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityTextureName"			"mirana_arrow"		
+		//"ItemBaseLevel"				"0"
+		"AbilityCastRange"				"30000"
+		"AbilityCastPoint"				"0.35"
+		"AbilityCooldown"				"0"
+		"AbilityDamage"					"0"
+		"AbilityManaCost"				"0"
+		"AbilityModifierSupportValue"	"0.5"	
+
+		"precache"
+		{
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_mirana.vsndevts"
+			"particle"					"particles/econ/items/mirana/mirana_crescent_arrow/mirana_spell_crescent_arrow.vpcf"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"stun_duration"			"9.0"
+			}
+
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"proj_speed"			"800"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"LinearProjectile"
+			{
+				"Target"      			"POINT"
+			    "EffectName"  			"particles/econ/items/mirana/mirana_crescent_arrow/mirana_spell_crescent_arrow.vpcf"
+			    "MoveSpeed"   			"%proj_speed"
+			    "StartRadius"   		"70"
+			    "StartPosition" 		"attach_origin"
+			    "EndRadius"     		"70"
+			    "FixedDistance" 		"30000"
+			    "TargetTeams"   		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			    "TargetTypes"   		"DOTA_UNIT_TARGET_BASIC"
+			    "TargetFlags"   		"DOTA_UNIT_TARGET_FLAG_NONE"
+			    "HasFrontalCone"    	"0"
+			    "ProvidesVision" 		"0"
+			}
+
+			"FireSound"
+			{
+				"EffectName"			"Hero_Mirana.ArrowCast"
+				"Target"				"CASTER"
+			}
+		}
+
+		"OnProjectileHitUnit"
+		{
+			"DeleteOnHit"	"1"
+			"Stun"
+			{
+				"Duration"				"%stun_duration"
+				"Target"				"TARGET"
+			}
+
+			"FireSound"
+			{
+				"EffectName"			"Hero_Mirana.ArrowImpact"
+				"Target"				"TARGET"
+			}
+
+		}
+	}
+	
 }

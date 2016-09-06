@@ -1,8 +1,13 @@
 
+var maxlaps = 0;
 
 function UpdateMaxLaps( table )
 {
-	$('#Goal').text = table.laps;
+	if (table.laps != -1)
+	{
+		maxlaps = table.laps;
+	}
+	$('#Goal').text = maxlaps;
 }
 
 function UpdateGameTime( table )
