@@ -1,4 +1,5 @@
 require('junglerace/GameModes/miranapudge')
+require('junglerace/GameModes/notrecurringrandom')
 
 
 function InitJungleRaceGame()
@@ -102,6 +103,12 @@ function InitJungleRaceGame()
 
 	Random_Heroes[29] = "unit_leshrac"	-- Leshrac
 	RealHeroNames[29] = "leshrac"
+
+	Random_Heroes[30] = "unit_holem"	-- Holem
+	RealHeroNames[30] = "tiny"
+
+	Random_Heroes[31] = "unit_wisp"		-- wisp
+	RealHeroNames[31] = "wisp"
 	
 	-----------------------------------------------------------------------------------------------
 	
@@ -121,6 +128,7 @@ function InitJungleRaceGame()
 
 	
 	gmMiranaPudgeInit()
+	gmNotRecurringRandomInit()
 
 	
 	print('[JungleRace] Game inited ----------------------------')

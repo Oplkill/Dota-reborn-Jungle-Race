@@ -16,6 +16,40 @@
 			$.Msg("MiranaPudge: ", $('#MiranaPudgeButton').checked);
 			GameEvents.SendCustomGameEventToServer( "gamemode_check", { "gamemode":"MiranaPudge", "checked":$('#MiranaPudgeButton').checked } );
 		}
+		
+		var prevCurringRandomSelect = 0;
+		
+		function OnToggleNotCurringRandom(buttonId)
+		{
+			var playerInfo = Game.GetLocalPlayerInfo();
+			if ( !playerInfo )
+			{
+				if (buttonId == 0)
+				{
+					$('#CurringRandomOff').checked = true;
+				}
+				if (buttonId == 1)
+				{
+					$('#CurringRandomOnLocal').checked = true;
+				}
+				if (buttonId == 2)
+				{
+					$('#CurringRandomOnGlobal').checked = true;
+				}
+				return;
+			}
+			prevCurringRandomSelect = buttonId;
+			$.Msg("Not random curring choosed: ", buttonId);
+			if (buttonId == 0)
+			{
+				GameEvents.SendCustomGameEventToServer( "gamemode_check", { "gamemode":"NotRecurringRandom", "checked":false} );
+			}
+			else
+			{
+				GameEvents.SendCustomGameEventToServer( "gamemode_check", { "gamemode":"NotRecurringRandom", "checked":true, "value":buttonId } );
+			}
+			
+		}
 
 		function OnVoteButtonPressed(category, vote)
 		{
@@ -54,6 +88,16 @@
 					<Panel class="ContainerCustomGameSettingOptions" hittest="false">
 						
 						<ToggleButton id="MiranaPudgeButton" checked="false" text="Mirana and Pudge" onactivate="OnToggleMiranaPudge()" />
+
+					</Panel>
+					
+					<Panel class="ContainerCustomGameSettingOptions" hittest="false">
+						
+						<Label class="CurringRandomTitle" id="CurringRandomTitle1" hittest="false" text="Not curring random" />
+						
+						<RadioButton id="CurringRandomOff" checked="checked" text="Off" onactivate="OnToggleNotCurringRandom(0)" />
+						<RadioButton id="CurringRandomOnLocal" checked="false" text="Local" onactivate="OnToggleNotCurringRandom(1)" />
+						<RadioButton id="CurringRandomOnGlobal" checked="false" text="Global" onactivate="OnToggleNotCurringRandom(2)" />
 
 					</Panel>
 				</Panel>

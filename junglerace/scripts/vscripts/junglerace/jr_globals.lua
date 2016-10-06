@@ -5,7 +5,7 @@ require('junglerace/jr_init')
 --Constants--------------------
 
 _G.MAXIMUM_PLAYERS = 10
-_G.MAXIMUM_RANDOM_HEROES = 29
+_G.MAXIMUM_RANDOM_HEROES = 31
 _G.DEBUG = false
 -------------------------------
 
@@ -43,6 +43,10 @@ _G.GameStarted = false
 -------------------------------
 
 _G.GM = {}						-- GameModes bool array. ["GameModeName"] = false/true
+
+-------------------------------
+
+
 
 -------------------------------
 

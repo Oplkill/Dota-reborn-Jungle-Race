@@ -2,6 +2,7 @@ require('junglerace/jr_globals')
 require('music_player_new')
 require('junglerace/jr_debug')
 require('junglerace/GameModes/miranapudge')
+require('junglerace/GameModes/notrecurringrandom')
 
 RoundStarted = false
 
@@ -46,6 +47,7 @@ function WaitRoundStarted()
 	----------------------------------
 
 	gmMiranaPudgeInGameInit()
+	gmNotRecurringRandomInGameInit()
 	
 	CountingPlayersVotes()
 	

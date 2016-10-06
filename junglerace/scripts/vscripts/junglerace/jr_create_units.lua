@@ -27,7 +27,11 @@ function CreateNewHero(player)
 	
 	local randomUnitId = TESTCHOOSEHERO
 	if TESTCHOOSEHERO == -1 then
-		randomUnitId = math.random(MAXIMUM_RANDOM_HEROES)
+		if GM["NotRecurringRandom"] then
+			randomUnitId = gmGetRandomUnitId(pl_id)
+		else
+			randomUnitId = math.random(MAXIMUM_RANDOM_HEROES)
+		end
 	end
 	local newUnitClass = Random_Heroes[randomUnitId]
 	

@@ -1,5 +1,7 @@
+//File edited with Simple Dota 2 Editor
+//https://github.com/Oplkill/Simple-Dota-2-Editor
+
 "DOTAAbilities"
 {
 
 }
-

@@ -8,10 +8,10 @@ function cancel_bufs( event )
     local bufs = caster:FindAllModifiers()
 	if bufs then
 		for k,buf in pairs(bufs) do
-			target:RemoveModifierByName(buf:GetEffectName())
 			if buf:IsDebuff() then
 				Duration = Duration + durPerDebuf
 			end
+			target:RemoveModifierByName(buf:GetEffectName())
 		end
 	end
 	if Duration > 0 then

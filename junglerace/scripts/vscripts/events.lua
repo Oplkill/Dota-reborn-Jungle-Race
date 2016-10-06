@@ -283,7 +283,7 @@ function GameMode:OnPlayerChat(keys)
 	local text = keys.text
 	
 	DebugPrintTable(keys)
-  print("chatted")
+  print("chatted - "..text)
 
 	--[[if text == nil or text == "" then
 		return
@@ -319,5 +319,9 @@ function GameMode:OnGameModeChecked(keys)
     GM[keys.gamemode] = true
   else
     GM[keys.gamemode] = false
+  end
+
+  if keys.gamemode == "NotRecurringRandom" and keys.checked == 1 then
+    gmNotRecurringRandomSet(keys.value)
   end
 end

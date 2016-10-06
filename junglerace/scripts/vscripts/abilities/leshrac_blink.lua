@@ -58,8 +58,10 @@ function HideCaster( event )
 	local bufs = caster:FindAllModifiers()
 	if bufs then
 		for k,buf in pairs(bufs) do
-			if buf:IsDebuff() then
-				caster:RemoveModifierByName(buf:GetEffectName())
+			if buf.IsDebuff~=nil then
+				if buf:IsDebuff() then
+					caster:RemoveModifierByName(buf:GetName())
+				end
 			end
 		end
 	end

@@ -1,5 +1,9 @@
+//File edited with Simple Dota 2 Editor
+//https://github.com/Oplkill/Simple-Dota-2-Editor
+
 "DOTAAbilities"
-{
+{//@ #Folder="Dummy"
+
 	//=============================
 	// "-" - dont working	(Не работает)
 	// "+" - working		(работает)
@@ -31,7 +35,8 @@
 
 		}
 
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// Queen of Pain: Shadow Strike (Прицеливание) +&
@@ -67,7 +72,8 @@
 				"tooltip_range" "5000 "
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// Ability: poison attack(Ядовитая атака) +&
@@ -133,7 +139,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="Passive"
+
 
 	//=================================================================================================================
 	// Ability: invulnerable (Неуязвимость) +&
@@ -164,7 +171,8 @@
 			}
 		}
 		
-	}
+	}//@ #Folder="No target"
+
 
 	//=================================================================================================================
 	// Ability: Kill all (Убить всех) +&
@@ -198,7 +206,8 @@
 				"Function"				"KillAllEndChannel"
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// Obsidian Destroyer: Astral Imprisonment (в астрал)+&
@@ -238,7 +247,8 @@
 				"prison_duration" "10.0"
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// Ability: Doom (Поджог) +&
@@ -423,7 +433,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// Queen of Pain: Shadow Strike (Кинуть голды) +&
@@ -459,7 +470,8 @@
 				"tooltip_range" "5000 "
 			}
 		}
-	}
+	}//@ #Folder="Auras"
+
 	
 	//=================================================================================================================
 	// Ability: Chilli-Willi aura (Аура замедления Чилли-Вилли) +&
@@ -519,7 +531,8 @@
 			}
 			
 		} 
-	}
+	}//@ #Folder="Point target"
+
 
 	//=================================================================================================================
 	// Ability: Ice Path (Ледяная преграда) +&
@@ -564,7 +577,8 @@
 				"damage"					"25"
 			}
 		}		
-	}
+	}//@ #Folder="Point target"
+
 	
 	//=================================================================================================================
 	// Ability: Fire path (Огненная стена) ?&
@@ -719,7 +733,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="Passive"
+
 
 	//=================================================================================================================
 	// Ability: Dragon Cold attack(Холодная атака дракона) +&
@@ -785,7 +800,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="Passive"
+
 	
 	//=================================================================================================================
 	// Ability: Dragon Fire attack(Горячая атака дракона) +&
@@ -850,7 +866,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="Dummy"
+
 
 	//=================================================================================================================
 	// Ability: negative hp regen (Отрицательный реген жизней) +&
@@ -920,7 +937,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="Auras"
+
 
 	//=================================================================================================================
 	// Ability: Super speed aura(Аура супер скорости) +&
@@ -980,7 +998,8 @@
 			}
 			
 		} 
-	}
+	}//@ #Folder="Auras"
+
 
 	//=================================================================================================================
 	// Ability: infinity mana aura(Аура вечной маны) +&
@@ -1040,7 +1059,8 @@
 			}
 			
 		} 
-	}
+	}//@ #Folder="Point target"
+
 	
 	//=================================================================================================================
 	// Ability: Antimage Blink (Телепорт)+&
@@ -1070,7 +1090,8 @@
 				"min_blink_range"  "0"
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 	
 	//=================================================================================================================
 	// Shadow Shaman: Voodoo (Полиморф)+&
@@ -1102,7 +1123,8 @@
 				"duration" "12.0 "
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 	
 	//=================================================================================================================
 	// Ability: Vengefulspirit Nether Swap (поменяться местами) +&
@@ -1196,7 +1218,8 @@
 				"Function"		"NetherSwap"
 			}						
 		}	
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// Brewmaster Storm: Cyclone (Ураган)+&
@@ -1227,7 +1250,8 @@
 				"duration_unit" "12.0 "
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// Pugna: Decrepify(Изгнание) +&
@@ -1269,7 +1293,8 @@
 			"tooltip_duration" "8.0"
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// Razor: Unstable Current (тот кто на тебя скастит магию, будет наказан)+&
@@ -1310,82 +1335,83 @@
 				"slow_amount" "-200"
 			}
 		}
-	}
+	}//@ #Folder="Passive"
+
 
 	//=================================================================================================================
 	// Ability:  Blur (Исчезновение на карте) ?&
 	//=================================================================================================================
 	"innocent_blur"
 	{
-		"BaseClass"						"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"phantom_assassin_blur"
-	
-		"precache"
+"BaseClass"					"ability_datadriven"
+"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AbilityTextureName"			"phantom_assassin_blur"
+
+"precache"
+{
+	"particle"				"particles/units/heroes/hero_phantom_assassin/phantom_assassin_blur.vpcf"
+}
+
+"AbilitySpecial"
+{
+	"01"
+	{
+		"var_type"				"FIELD_INTEGER"
+		"bonus_evasion"			"0"
+	}
+	"02"
+	{
+		"var_type"				"FIELD_FLOAT"
+		"transparency_fade"		"0.65"
+	}
+	"03"
+	{
+		"var_type"				"FIELD_INTEGER"
+		"radius"					"2100"
+	}
+}
+
+"Modifiers"
+{
+	"modifier_innocent_blur"
+	{
+		"Passive"	"1"
+		"IsHidden"	"1"
+
+		"ThinkInterval"	"0.5"
+		"OnIntervalThink"
 		{
-			"particle"			"particles/units/heroes/hero_phantom_assassin/phantom_assassin_blur.vpcf"
+			"RunScript"
+			{
+				"ScriptFile"	"abilities/blur.lua"
+				"Function"		"Blur"
+			}
 		}
-	
-		"AbilitySpecial"
+
+		"Properties"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_evasion"				"0"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"transparency_fade"			"0.65"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"radius"					"2100"
-			}
+			"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%bonus_evasion"
 		}
-	
-		"Modifiers"
+
+		"States"
 		{
-			"modifier_innocent_blur"
-			{
-				"Passive"	"1"
-				"IsHidden"	"1"
-	
-				"ThinkInterval"	"0.5"
-				"OnIntervalThink"
-				{
-					"RunScript"
-					{
-						"ScriptFile"	"abilities/blur.lua"
-						"Function"		"Blur"
-					}
-				}
-	
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%bonus_evasion"
-				}
-	
-				"States"
-				{
-					"MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES"		"MODIFIER_STATE_VALUE_ENABLED"
-				}
-			}
-	
-			"modifier_innocent_blur_enemy_datadriven"
-			{
-				"EffectName"	"particles/units/heroes/hero_phantom_assassin/phantom_assassin_blur.vpcf"
-				"EffectAttachType"	"follow_origin"
-				
-	
-				"States"
-				{
-					"MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES"		"MODIFIER_STATE_VALUE_DISABLED"
-				}
-			}
+			"MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES"		"MODIFIER_STATE_VALUE_ENABLED"
 		}
 	}
+
+	"modifier_innocent_blur_enemy_datadriven"
+	{
+		"EffectName"			"particles/units/heroes/hero_phantom_assassin/phantom_assassin_blur.vpcf"
+		"EffectAttachType"		"follow_origin"
+		
+
+		"States"
+		{
+			"MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES"		"MODIFIER_STATE_VALUE_DISABLED"
+		}
+	}
+}}//@ #Folder="Unit target"
+
 	
 	//=================================================================================================================
 	// Bane: Nightmare(Сон) +&
@@ -1436,7 +1462,8 @@
 				"cast_range_tooltip" "800"
 			}
 		}
-	}
+	}//@ #Folder="Point target"
+
 
 	//=================================================================================================================
 	// Ability: Hook (Хук мясняка) &+
@@ -1504,7 +1531,8 @@
 				"hook_damage"		"0"
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// Ability: catch in trees (ловит деревьями) &+
@@ -1537,7 +1565,8 @@
 				"duration"				"10.0"
 			}
 		}
-	}
+	}//@ #Folder="Dummy"
+
 
 	//=================================================================================================================
 	// Ability: negative hp regen (Отрицательный реген жизней) +&
@@ -1607,7 +1636,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="Passive"
+
 	
 	//=================================================================================================================
 	// Phoenix: Supernova +&
@@ -1656,7 +1686,8 @@
 				"tooltip_duration"	"6 6 6 6"
 			}
 		}
-	}
+	}//@ #Folder="Auras"
+
 	
 	//=================================================================================================================
 	// Ability: fire aura (Аура огня) +&
@@ -1742,7 +1773,8 @@
 			  }
 		  }
 		}
-	}
+	}//@ #Folder="Point target"
+
 	
 	//=================================================================================================================
 	// Ability: chronosphere (Останавливает время в этой области) +&
@@ -1943,7 +1975,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="Auras"
+
 
 	//=================================================================================================================
 	// Ability: 999% slow aura (Аура замедления 999%) +&
@@ -2003,7 +2036,8 @@
 			}
 			
 		} 
-	}
+	}//@ #Folder="Unit target"
+
 	
 	//=================================================================================================================
 	// Ability: Crystal Maiden's Frostbite(Заморозка врага) +&
@@ -2039,7 +2073,8 @@
 				"creep_duration" "8.0"
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// Ability: spell steal (тырит спел врага) +&
@@ -2071,7 +2106,8 @@
 				"Function"		"SpellSteal"
 			}	
 		}
-	}	
+	}//@ #Folder="Point target"
+	
 
 	//=================================================================================================================
 	// leshrac_wall: Wall (стена) +&
@@ -2164,7 +2200,8 @@
 				"IsPurgable"		"0"
 			}
 		}
-	}
+	}//@ #Folder="No target"
+
 
 	//=================================================================================================================
 	// leshrac_blink: leshrac blink (Телепорт домой) +&
@@ -2266,7 +2303,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	//=================================================================================================================
@@ -2380,7 +2418,8 @@
 				"projectile_speed" "1200"
 			}
 		}
-	}
+	}//@ #Folder="Point target"
+
 	
 	//=================================================================================================================
 	// Ability: anger of the trees (Гнев деревьев) +
@@ -2448,7 +2487,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// Ability: torrent (торнадо из под земли) +
@@ -2655,7 +2695,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="Point target"
+
 	
 	//=================================================================================================================
 	// Ability: peg with chains (кол с цепями) +
@@ -2887,7 +2928,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="No target"
+
 	
 	//=================================================================================================================
 	// Ability: Stun and Die (Стань и умри) +
@@ -2927,7 +2969,8 @@
 				"Function"				"LiveAndDie"
 			}
 		}
-	}
+	}//@ #Folder="No target"
+
 
 	//=================================================================================================================
 	// holy_cone: backward (сдвиг назад) ?
@@ -3077,7 +3120,8 @@
 		}
 
 
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// mana leak (убавление маны при движении) +
@@ -3197,7 +3241,8 @@
 				}
 			}
 		}
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// last word (станит врага если тут юзнул способность) +
@@ -3290,7 +3335,8 @@
 				"TextureName"      	"drow_ranger_silence"
 			}
 		}
-	}
+	}//@ #Folder="Auras"
+
 
 	//=================================================================================================================
 	// Ability: Tiredness aura (Аура усталости) +
@@ -3355,93 +3401,94 @@
 				}
 			}
 		} 
-	}
+	}//@ #Folder="Unit target"
+
 
 	//=================================================================================================================
 	// cancel all bufs (отменяет все бафы) ?
 	//=================================================================================================================
 	"cancel_bufs"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------					
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"keeper_of_the_light_illuminate"
+// General
+//-------------------------------------------------------------------------------------------------------------					
+"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
+"BaseClass"					"ability_datadriven"
+"AbilityTextureName"			"keeper_of_the_light_illuminate"
 
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+// Casting
+//-------------------------------------------------------------------------------------------------------------
+"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
 
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"3"
+// Time		
+//-------------------------------------------------------------------------------------------------------------
+"AbilityCooldown"				"3"
 
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"1"		
+// Cost
+//-------------------------------------------------------------------------------------------------------------
+"AbilityManaCost"			"1"		
 
-		// Cast Range
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"2600"
+// Cast Range
+//-------------------------------------------------------------------------------------------------------------
+"AbilityCastRange"			"3000"
 
-		"AbilitySpecial"
+"AbilitySpecial"
+{
+	"01"
+	{
+		"var_type"      		"FIELD_FLOAT"
+		"duration_per_debuff"   "2.5"
+	}
+}
+
+"OnSpellStart"
+{
+	"RunScript"
+	{
+		"ScriptFile"			"abilities/cancel_bufs.lua"
+		"Function"			"cancel_bufs"
+		"target"				"TARGET"
+		"caster"				"CASTER"
+	}
+	"FireEffect"
+	{
+		"EffectName"			"particles/units/heroes/hero_keeper_of_the_light/keeper_mana_leak.vpcf"
+		"EffectAttachType"	"follow_origin"
+		"durPerDebuf"		"%duration_per_debuff"
+		"Target"				"TARGET"
+	}
+	"FireSound"
+	{
+		"EffectName"			"Hero_KeeperOfTheLight.ManaLeak.Cast"
+		"Target"				"CASTER"
+	}
+	"FireSound"
+	{
+		"EffectName"			"Hero_KeeperOfTheLight.ManaLeak.Target"
+		"Target"				"TARGET"
+	}
+}
+"Modifiers"
+{ 
+	"modifier_cancel_buf_speed"
+	{
+		"Passive"				"0"
+		"IsHidden"				"0"
+		"IsDebuff"				"0"
+		"TextureName"			"windrunner_windrun"
+
+		"EffectName"				"Hero_KeeperOfTheLight.ManaLeak.Cast"
+		"EffectAttachType"		"follow_origin"
+
+		"Properties"
 		{
-			"01"
-			{
-				"var_type"      		"FIELD_FLOAT"
-				"duration_per_debuff"   "2.5"
-			}
-		}
-
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"		"abilities/cancel_bufs.lua"
-				"Function"			"cancel_bufs"
-				"target"			"TARGET"
-				"caster"			"CASTER"
-			}
-			"FireEffect"
-			{
-				"EffectName"        "particles/units/heroes/hero_keeper_of_the_light/keeper_mana_leak.vpcf"
-				"EffectAttachType"  "follow_origin"
-				"durPerDebuf"		"%duration_per_debuff"
-				"Target"            "TARGET"
-			}
-			"FireSound"
-			{
-				"EffectName"	"Hero_KeeperOfTheLight.ManaLeak.Cast"
-				"Target" 		"CASTER"
-			}
-			"FireSound"
-			{
-				"EffectName"	"Hero_KeeperOfTheLight.ManaLeak.Target"
-				"Target" 		"TARGET"
-			}
-		}
-		"Modifiers"
-		{ 
-			"modifier_cancel_buf_speed"
-			{
-				"Passive"			"0"
-				"IsHidden"			"0"
-				"IsDebuff"			"0"
-				"TextureName"      	"windrunner_windrun"
-
-				"EffectName"		"Hero_KeeperOfTheLight.ManaLeak.Cast"
-				"EffectAttachType"	"follow_origin"
-		
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE" "45"
-				}
-			}
+			"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE" "45"
 		}
 	}
+}}//@ #Folder="Modes\MiranaPudge"
+
 
 	//------------------------------------------------------
 	//------------------------------------------------------
@@ -3528,7 +3575,8 @@
 				"hook_damage"		"0"
 			}
 		}
-	}
+	}//@ #Folder="Modes\MiranaPudge"
+
 
 	//=================================================================================================================
 	// Ability: Mirana Arrow &+
@@ -3612,6 +3660,54 @@
 			}
 
 		}
-	}
+	}//@ #Folder="Passive"
+
 	
-}
+"magic_immunity"{
+"BaseClass"				"spell_immunity"
+"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AbilityTextureName"	"spell_immunity"}//@ #Folder="No target" #lua0="abilities\fall_asleep.lua"
+"fall_asleep"{
+// General
+//-------------------------------------------------------------------------------------------------------------
+"BaseClass"           		"ability_lua"
+"ScriptFile"           			"abilities/fall_asleep.lua"
+"AbilityTextureName"  		 "fall_asleep"
+"MaxLevel"             		"1"
+"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+"AbilityChannelTime" 		"1.0"
+"AbilityCooldown"			"15.0"
+
+"AbilitySpecial"
+{
+	"01"
+	{
+		"var_type"           "FIELD_INTEGER"
+		"Duration"           "10"
+	}
+}}//@ #Folder="No target" #lua0="abilities\burn_mana.lua"
+"burn_mana"{
+// General
+//-------------------------------------------------------------------------------------------------------------
+"BaseClass"           		"ability_lua"
+"ScriptFile"           			"abilities/burn_mana.lua"
+"AbilityTextureName"  		 "lone_druid_spirit_bear_return"
+"MaxLevel"             		"1"
+"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+"AbilityChannelTime" 		"3.5"
+"AbilityCooldown"			"10.0"
+"AbilityCastRange"		"600"
+
+"AbilitySpecial"
+{
+	"01"
+	{
+		"var_type"          	 "FIELD_FLOAT"
+		"stun_duration"      "1.5"
+	}
+	"02"
+	{
+		"var_type"		"FIELD_FLOAT"
+		"radius"			"600"
+	}
+}}}

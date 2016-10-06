@@ -35,3 +35,14 @@ function GetPointRandomUnit( caster )
 
 	return pickedUnits[i]:GetAbsOrigin()
 end
+
+function ScrambleArray( arr, size )
+	for i = 1, size do
+		local r = math.random(size)
+		local t = arr[i]
+		arr[i] = arr[r]
+		arr[r] = t
+	end
+
+	return arr
+end

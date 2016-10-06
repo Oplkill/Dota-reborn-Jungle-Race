@@ -1,5 +1,9 @@
+//File edited with Simple Dota 2 Editor
+//https://github.com/Oplkill/Simple-Dota-2-Editor
+
 "DOTAUnits"
-{
+{//@ #Folder="Dummyes"
+
 	// Made by BMD
 	"npc_dummy_unit"
 	{
@@ -78,7 +82,8 @@
 		// Bots
 		//----------------------------------------------------------------
 		"AttackDesire" "1.5" // How much bots want to attack them vs other non-hero things
-	}
+	}//@ #Folder="Dummyes"
+
 	"plague_ward_1_datadriven"
 	{
 		// General
@@ -163,7 +168,8 @@
 	
 		//Inventory
 		"HasInventory"				"0"
-	}
+	}//@ #Folder="Dummyes"
+
 	"plague_ward_2_datadriven"
 	{
 		// General
@@ -248,7 +254,8 @@
 	
 		//Inventory
 		"HasInventory"				"0"
-	}
+	}//@ #Folder="Dummyes"
+
 	"plague_ward_3_datadriven"
 	{
 		// General
@@ -333,7 +340,8 @@
 	
 		//Inventory
 		"HasInventory"				"0"
-	}
+	}//@ #Folder="Dummyes"
+
 	"plague_ward_4_datadriven"
 	{
 		// General
@@ -3114,96 +3122,96 @@
 
 	"unit_leshrac"
 	{
-		"BaseClass"     			"npc_dota_creature"
-		"Ability1"					"leshrac_wall"
-		"Ability2"					"leshrac_blink"
-		"Ability3"					""
-		"Ability4"					""
-		"ArmorPhysical"				"0"
+"BaseClass"					"npc_dota_creature"
+"Ability1"					"leshrac_wall"
+"Ability2"					"leshrac_blink"
+"Ability3"					""
+"Ability4"					""
+"ArmorPhysical"				"0"
 
-		"Model"						"models/heroes/leshrac/leshrac.mdl"	// Model.
-		"Portrait"					"vgui/hud/heroportraits/portrait_leshrac"		// Small image for hero selection
-		"SoundSet"					"Hero_Leshrac"									// Name of sound set.
-		"ModelScale"				".84"
-		"LoadoutScale"          	".75"
-		"LastHitChallengeRival"		"npc_dota_hero_lion"
-		"HeroSelectSoundEffect"		")weapons/hero/leshrac/split_earth.wav"
+"Model"						"models/heroes/leshrac/leshrac.mdl"	// Model.
+"Portrait"					"vgui/hud/heroportraits/portrait_leshrac"		// Small image for hero selection
+"SoundSet"					"Hero_Leshrac"									// Name of sound set.
+"ModelScale"					".84"
+"LoadoutScale"				".75"
+"LastHitChallengeRival"		"npc_dota_hero_lion"
+"HeroSelectSoundEffect"		")weapons/hero/leshrac/split_earth.wav"
 
-		// Attack
-		//-------------------------------------------------------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-		"AttackDamageMin"			"0"									// Damage range min.
-		"AttackDamageMax"			"0"									// Damage range max.
-		"AttackRate"				"1.7"									// Speed of attack.
-		"AttackAnimationPoint"		"0.5"									// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"600"									// Range within a target can be acquired.
-		"AttackRange"				"128"									// Range within a target can be attacked.
-		"ProjectileModel"			""										// Particle system model for projectile.
-		"ProjectileSpeed"			""										// Speed of projectile.
+// Attack
+//-------------------------------------------------------------------------------------------------------------
+"AttackCapabilities"			"DOTA_UNIT_CAP_NO_ATTACK"
+"AttackDamageMin"			"0"									// Damage range min.
+"AttackDamageMax"			"0"									// Damage range max.
+"AttackRate"					"1.7"									// Speed of attack.
+"AttackAnimationPoint"		"0.5"									// Normalized time in animation cycle to attack.
+"AttackAcquisitionRange"		"600"									// Range within a target can be acquired.
+"AttackRange"				"128"									// Range within a target can be attacked.
+"ProjectileModel"				""										// Particle system model for projectile.
+"ProjectileSpeed"				""										// Speed of projectile.
 
-		// Movement
-		//-------------------------------------------------------------------------------------------------------------
-		"MovementCapabilities"  	"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"120"									// Speed.
-		"MovementTurnRate"			"1.0"									// Turning rate.
-		"HasAggressiveStance"		"1"										// Plays alternate idle/run animation when near enemies
-		
-		"VoiceFile"				"scripts/voscripts/game_sounds_vo_leshrac.txt"
-		"ParticleFile"			"particles/units/heroes/hero_leshrac.pcf"
-		"GameSoundsFile"		"scripts/game_sounds_heroes/game_sounds_leshrac.txt"
-		"HealthBarOffset"			"170"
-		"VisionNighttimeRange"		"800"
+// Movement
+//-------------------------------------------------------------------------------------------------------------
+"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+"MovementSpeed"			"175"									// Speed.
+"MovementTurnRate"			"1.3"									// Turning rate.
+"HasAggressiveStance"		"0"										// Plays alternate idle/run animation when near enemies
 
-		// Additional data needed to render the out of game portrait
-		"RenderablePortrait"
+"VoiceFile"					"scripts/voscripts/game_sounds_vo_leshrac.txt"
+"ParticleFile"					"particles/units/heroes/hero_leshrac.pcf"
+"GameSoundsFile"			"scripts/game_sounds_heroes/game_sounds_leshrac.txt"
+"HealthBarOffset"				"170"
+"VisionNighttimeRange"		"800"
+
+// Additional data needed to render the out of game portrait
+"RenderablePortrait"
+{
+	"Particles"
+	{
+		"leshrac_ambient_glow"
 		{
-			"Particles"
+			"0"
 			{
-				"leshrac_ambient_glow"
-				{
-					"0"
-					{
-						"type"		"follow_origin"
-						"location"	"attach_hitloc"  //Note : shouldn't need this
-					}
-				}
-				"leshrac_loadout"
-				{
-					"0"
-					{
-						"type"		"follow_origin"
-						"location"		"attach_hitloc"
-					}
-				}
+				"type"		"follow_origin"
+				"location"	"attach_hitloc"  //Note : shouldn't need this
 			}
 		}
-		
-		"StatusHealth"                "13"        // Здоровье.
-		"StatusHealthRegen"           "0"         // Регенерация в секунду.
-		"StatusMana"                  "3"         // Мана.
-		"StatusManaRegen"             "0"         // Регенерация маны в секунду.
-
-		"BoundsHullName"        	"DOTA_HULL_SIZE_HERO"
-	    "RingRadius"            	"70"
-
-	    "SelectionGroup"               "npc_dota_hero_zuus"              
-		"SelectOnSpawn"                "1"
-		"IgnoreAddSummonedToSelection" "0"
-
-	    // Creature Data
-        //----------------------------------------------------------------
-        "Creature"
-        {
-            "DisableClumpingBehavior"       "1"
-            "AttachWearables"
-            {
-                "Wearable1" { "ItemDef" "345" }
-                "Wearable2" { "ItemDef" "346" }
-                "Wearable3" { "ItemDef" "347" }
-                "Wearable4" { "ItemDef" "529" }
+		"leshrac_loadout"
+		{
+			"0"
+			{
+				"type"		"follow_origin"
+				"location"	"attach_hitloc"
 			}
-        }			
+		}
 	}
+}
+
+"StatusHealth"					"13"        // Здоровье.
+"StatusHealthRegen"				"0"         // Регенерация в секунду.
+"StatusMana"					"3"         // Мана.
+"StatusManaRegen"				"0"         // Регенерация маны в секунду.
+
+"BoundsHullName"				"DOTA_HULL_SIZE_HERO"
+"RingRadius"						"70"
+
+"SelectionGroup"					"npc_dota_hero_zuus"              
+"SelectOnSpawn"					"1"
+"IgnoreAddSummonedToSelection"	"0"
+
+// Creature Data
+//----------------------------------------------------------------
+"Creature"
+{
+    "DisableClumpingBehavior"       "1"
+    "AttachWearables"
+    {
+        "Wearable1" { "ItemDef" "345" }
+        "Wearable2" { "ItemDef" "346" }
+        "Wearable3" { "ItemDef" "347" }
+        "Wearable4" { "ItemDef" "529" }
+	}
+}}//@ #Folder="Modes\MiranaPudge"
+
 
 
 	//-------------------------------------------------------------------------------------------------------
@@ -3241,7 +3249,8 @@
                 "Wearable6" { "ItemDef" "262" }
 			}
         }
-	}
+	}//@ #Folder="Modes\MiranaPudge\MiranaPudge"
+
 
 	"unit_gm_mirana"
 	{
@@ -3278,4 +3287,203 @@
 			}
         }			
 	}
+"unit_holem"{
+"BaseClass"					"npc_dota_creature"
+"Ability1"					"tiredness_aura"
+"Ability2"					"magic_immunity"
+"Ability3"					"fall_asleep"
+"Ability4"					""
+"ArmorPhysical"				"20"								
+
+"Model"						"models/heroes/tiny_01/tiny_01.mdl"					// Model.
+"SoundSet"					"Hero_Tiny"								// Name of sound set.
+"IdleExpression"				"scenes/centaur/centaur_exp_idle_01.vcd"		// custom facial animation idle
+"Portrait"					"vgui/hud/heroportraits/portrait_tiny"
+"ModelScale"					"1.8"
+"LoadoutScale"				"0.63"
+"NameAliases"				"centaur"
+"LastHitChallengeRival"		"npc_dota_hero_chaos_knight"
+"HeroSelectSoundEffect"		")weapons/hero/centaur/stampede_cast.wav"
+
+// Attack
+//-------------------------------------------------------------------------------------------------------------
+"AttackCapabilities"			"DOTA_UNIT_CAP_NO_ATTACK"
+"AttackDamageMin"			"0"										// Damage range min.
+"AttackDamageMax"			"0"										// Damage range max.	
+"AttackRate"					"1.7"									// Speed of attack.
+"AttackAnimationPoint"		"0.3"									// Normalized time in animation cycle to attack.
+"AttackAcquisitionRange"		"600"									// Range within a target can be acquired.
+"AttackRange"				"1"									// Range within a target can be attacked.
+
+// Movement
+//-------------------------------------------------------------------------------------------------------------
+"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+"MovementSpeed"			"130"									// Speed.
+"MovementTurnRate"			"0.0001"									// Turning rate.
+"HasAggressiveStance"		"0"										// Plays alternate idle/run animation when near enemies
+
+"ParticleFile"					"particles/units/heroes/hero_tiny.pcf"
+"GameSoundsFile"			"scripts/game_sounds_heroes/game_sounds_tiny.txt"
+"VoiceFile"					"scripts/voscripts/game_sounds_vo_tiny.txt"
+"HealthBarOffset"				"200"
+"VisionNighttimeRange"		"800"
+
+"RenderablePortrait"
+{
+	"Particles"
+	{
+		"tiny_ambient"
+		{
+			"0"
+			{
+				"type"		"follow_origin"
+				"location"	"attach_hitloc"  //Note : shouldn't need this
+			}
+		}	
+		"tiny_loadout"
+		{
+			"0"
+			{
+				"type"		"follow_origin"
+				"location"	"attach_hitloc"
+			}
+		}
+	}
 }
+
+"precache"
+{
+	"model"			"models/heroes/tiny_02/tiny_02.mdl"
+	"model"			"models/heroes/tiny_03/tiny_03.mdl"
+	"model"			"models/heroes/tiny_04/tiny_04.mdl"
+	"model"			"models/heroes/tiny_01/tiny_01_tree.mdl"
+}
+
+"StatusHealth"					"346"       // Здоровье.
+"StatusHealthRegen"				"0"         // Регенерация в секунду.
+"StatusMana"					"0"         // Мана.
+"StatusManaRegen"				"0"         // Регенерация маны в секунду.
+
+"BoundsHullName"				"DOTA_HULL_SIZE_HERO"
+"RingRadius"						"200"
+
+"SelectionGroup"					"npc_dota_hero_zuus"              
+"SelectOnSpawn"					"1"
+"IgnoreAddSummonedToSelection"	"0"
+
+// Creature Data
+//----------------------------------------------------------------
+"Creature"
+{
+    "DisableClumpingBehavior"		"1"
+    "AttachWearables"
+    {
+        "Wearable1" { "ItemDef" "493" }
+        "Wearable2" { "ItemDef" "494" }
+        "Wearable3" { "ItemDef" "495" }
+        "Wearable4" { "ItemDef" "496" }
+        "Wearable5" { "ItemDef" "497" }
+	}
+}}"unit_wisp"{
+"BaseClass"					"npc_dota_creature"
+"Ability1"					"cancel_bufs"
+"Ability2"					"burn_mana"
+"Ability3"					""
+"Ability4"					""
+"ArmorPhysical"				"-10"								
+
+"Model"						"models/heroes/wisp/wisp.mdl"					// Model.
+"SoundSet"					"Hero_Wisp"								// Name of sound set.
+"IdleExpression"				"scenes/centaur/centaur_exp_idle_01.vcd"		// custom facial animation idle
+"Portrait"					"vgui/hud/heroportraits/portrait_wisp"
+"ModelScale"					"0.6"
+"LoadoutScale"				"0.63"
+"NameAliases"				"centaur"
+"LastHitChallengeRival"		"npc_dota_hero_zuus"
+"HeroSelectSoundEffect"		")weapons/hero/centaur/stampede_cast.wav"
+
+// Attack
+//-------------------------------------------------------------------------------------------------------------
+"AttackCapabilities"			"DOTA_UNIT_CAP_NO_ATTACK"
+"AttackDamageMin"			"0"										// Damage range min.
+"AttackDamageMax"			"0"										// Damage range max.	
+"AttackRate"					"1.7"									// Speed of attack.
+"AttackAnimationPoint"		"0.3"									// Normalized time in animation cycle to attack.
+"AttackAcquisitionRange"		"600"									// Range within a target can be acquired.
+"AttackRange"				"1"									// Range within a target can be attacked.
+
+// Movement
+//-------------------------------------------------------------------------------------------------------------
+"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+"MovementSpeed"			"135"									// Speed.
+"MovementTurnRate"			"1.0"									// Turning rate.
+"HasAggressiveStance"		"0"										// Plays alternate idle/run animation when near enemies
+
+"ParticleFile"					"particles/units/heroes/hero_tiny.pcf"
+"GameSoundsFile"			"scripts/game_sounds_heroes/game_sounds_tiny.txt"
+"VoiceFile"					"scripts/voscripts/game_sounds_vo_tiny.txt"
+"HealthBarOffset"				"160"
+"VisionNighttimeRange"		"800"
+
+"RenderablePortrait"
+{
+	"Particles"
+	{
+		"wisp_ambient"
+		{
+			"0"
+			{
+				"type"		"follow_attachment"
+				"location"	"attach_hitloc"
+			}
+			"1"
+			{
+				"type"		"follow_origin"
+				"location"	"attach_hitloc"  //Note : shouldn't need this
+			}
+			"10"
+			{
+				"type"		"world_origin"
+				"position"	"1 1 0"  
+			}
+			"11"
+			{
+				"type"		"world_origin"
+				"position"	"1 1 1"  
+			}
+			"13"
+			{
+				"type"		"world_origin"
+				"position"	"0 1 1"  
+			}
+		}	
+	}
+}
+
+"precache"
+{
+	"model"			"models/development/invisiblebox.mdl"
+}
+
+"StatusHealth"					"10"       // Здоровье.
+"StatusHealthRegen"				"0"         // Регенерация в секунду.
+"StatusMana"					"1"         // Мана.
+"StatusManaRegen"				"0.1"         // Регенерация маны в секунду.
+
+"BoundsHullName"				"DOTA_HULL_SIZE_HERO"
+"RingRadius"						"160"
+
+"SelectionGroup"					"npc_dota_hero_zuus"              
+"SelectOnSpawn"					"1"
+"IgnoreAddSummonedToSelection"	"0"
+
+// Creature Data
+//----------------------------------------------------------------
+"Creature"
+{
+	"DisableClumpingBehavior"		"1"
+	"AttachWearables"
+	{
+        	"Wearable1" { "ItemDef" "536" }
+	}
+}}}
