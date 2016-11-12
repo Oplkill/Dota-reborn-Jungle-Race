@@ -73,13 +73,13 @@ function Precache( context )
   PrecacheUnitByNameSync( "unit_leshrac",       context)
   PrecacheUnitByNameSync( "unit_holem",         context)
   PrecacheUnitByNameSync( "unit_wisp",          context)
+  PrecacheUnitByNameSync( "unit_peon",          context)
 
 
+  PrecacheUnitByNameSync( "building_barrel",    context)
 
-  PrecacheUnitByNameSync( "unit_gm_mirana",      context)
-  PrecacheUnitByNameSync( "unit_gm_pudge",       context)
-  
-  
+  PrecacheUnitByNameSync( "unit_gm_mirana",     context)
+  PrecacheUnitByNameSync( "unit_gm_pudge",      context)
   
   PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts", context )
 end

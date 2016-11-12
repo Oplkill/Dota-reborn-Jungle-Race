@@ -1,6 +1,9 @@
 //File edited with Simple Dota 2 Editor
 //https://github.com/Oplkill/Simple-Dota-2-Editor
 
+//File edited with Simple Dota 2 Editor
+//https://github.com/Oplkill/Simple-Dota-2-Editor
+
 "DOTAAbilities"
 {//@ #Folder="Dummy"
 
@@ -3533,7 +3536,7 @@
 		
 		"AbilityCastRange"				"30000"
 		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"3"
+		"AbilityCooldown"				"10"
 		"AbilityManaCost"				"0"
 		"MaxLevel"               		"1"
 	
@@ -3593,7 +3596,7 @@
 		//"ItemBaseLevel"				"0"
 		"AbilityCastRange"				"30000"
 		"AbilityCastPoint"				"0.35"
-		"AbilityCooldown"				"0"
+		"AbilityCooldown"				"7"
 		"AbilityDamage"					"0"
 		"AbilityManaCost"				"0"
 		"AbilityModifierSupportValue"	"0.5"	
@@ -3710,4 +3713,6 @@
 		"var_type"		"FIELD_FLOAT"
 		"radius"			"600"
 	}
-}}}
+}}
+
+}

@@ -25,7 +25,6 @@ require('libraries/animations')
 -- This library can be used for performing "Frankenstein" attachments on units
 require('libraries/attachments')
 
-
 -- These internal libraries set up barebones's events and processes.  Feel free to inspect them/change them if you need to.
 require('internal/gamemode')
 require('internal/events')
@@ -34,6 +33,10 @@ require('internal/events')
 require('settings')
 -- events.lua is where you can specify the actions to be taken when any event occurs and is one of the core barebones files.
 require('events')
+
+
+
+
 
 --[[
   This function should be used to set up Async precache calls at the beginning of the gameplay.
@@ -140,7 +143,8 @@ end
 function GameMode:InitGameMode()
   GameMode = self
   DebugPrint('[BAREBONES] Starting to load Barebones gamemode...')
-
+	
+	
   -- Call the internal function to set up the rules/behaviors specified in constants.lua
   -- This also sets up event hooks for all event handlers in events.lua
   -- Check out internals/gamemode to see/modify the exact code

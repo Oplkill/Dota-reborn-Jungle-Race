@@ -36,9 +36,16 @@ function SpellSteal( keys )
 			caster:RemoveAbility(ability:GetAbilityName())
 		end
 
+		if abilName ~= "gm_mirana_arrow" and abilName ~= "gm_pudge_hook" then
+			target:RemoveAbility(abilName)
+		end
+
+		if abilName == "gm_pudge_hook" then
+			abilName = "pudge_hook"
+		end
 		local added_abil = caster:AddAbility(abilName)
 		added_abil:SetLevel(1)
-		target:RemoveAbility(abilName)
+		
 	end
 
 	--[[

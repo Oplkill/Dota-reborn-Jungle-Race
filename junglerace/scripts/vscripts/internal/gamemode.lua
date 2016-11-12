@@ -104,6 +104,7 @@ function GameMode:_InitGameMode()
   CustomGameEventManager:RegisterListener( "setting_vote",    Dynamic_Wrap(GameMode, "OnSettingVote"))
   CustomGameEventManager:RegisterListener( "gamemode_check",  Dynamic_Wrap(GameMode, "OnGameModeChecked"))
   
+  
   --ListenToGameEvent("dota_tutorial_shop_toggled", Dynamic_Wrap(GameMode, 'OnShopToggled'), self)
 
   --ListenToGameEvent('player_spawn', Dynamic_Wrap(GameMode, 'OnPlayerSpawn'), self)

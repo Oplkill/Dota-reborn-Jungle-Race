@@ -2095,117 +2095,116 @@
 
 	"unit_necromant"
 	{
-		"BaseClass"     			"npc_dota_creature"
-		"Ability1"					"Banish"
-		"Ability2"					""
-		"Ability3"					""
-		"Ability4"					""
-		"ArmorPhysical"				"0"								
+"BaseClass"               			"npc_dota_creature"
+"Ability1"                			"Banish"
+"Ability2"                			""
+"Ability3"                			""
+"Ability4"                			""
+"ArmorPhysical"           			"0"								
 
-		"Model"						"models/heroes/pugna/pugna.mdl"		// Model.
-		"Portrait"					"vgui/hud/heroportraits/portrait_pugna"		// Small image for hero selection
-		"IdleExpression"			"scenes/pugna/pugna_exp_idle_01.vcd"		// custom facial animation idle
-		"SoundSet"					"Hero_Pugna"									// Name of sound set.
-		"ModelScale"				".74"
-		"LoadoutScale"          	".85"
-		"LastHitChallengeRival"		"npc_dota_hero_viper"
-		"HeroSelectSoundEffect"		")weapons/hero/pugna/netherblast_precast.wav"
+"Model"                   			"models/heroes/pugna/pugna.mdl"		// Model.
+"Portrait"                			"vgui/hud/heroportraits/portrait_pugna"		// Small image for hero selection
+"IdleExpression"          			"scenes/pugna/pugna_exp_idle_01.vcd"		// custom facial animation idle
+"SoundSet"                			"Hero_Pugna"									// Name of sound set.
+"ModelScale"              			".74"
+"LoadoutScale"            			".85"
+"LastHitChallengeRival"   		"npc_dota_hero_viper"
+"HeroSelectSoundEffect"   		")weapons/hero/pugna/netherblast_precast.wav"
 
-		// Attack
-		//-------------------------------------------------------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-		"AttackDamageMin"		 	"0"									// Damage range min.
-		"AttackDamageMax"			"0"									// Damage range max.
-		"AttackRate"				"1.7"									// Speed of attack.
-		"AttackAnimationPoint"		"0.5"									// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"800"									// Range within a target can be acquired.
-		"AttackRange"				"600"									// Range within a target can be attacked.
-		"ProjectileModel"			"pugna_base_attack"						// Particle system model for projectile.
-		"ProjectileSpeed"			"900"									// Speed of projectile.
+// Attack
+//-------------------------------------------------------------------------------------------------------------
+"AttackCapabilities"      		"DOTA_UNIT_CAP_NO_ATTACK"
+"AttackDamageMin"         		"0"									// Damage range min.
+"AttackDamageMax"         		"0"									// Damage range max.
+"AttackRate"              			"1.7"									// Speed of attack.
+"AttackAnimationPoint"    		"0.5"									// Normalized time in animation cycle to attack.
+"AttackAcquisitionRange"  		"800"									// Range within a target can be acquired.
+"AttackRange"             			"600"									// Range within a target can be attacked.
+"ProjectileModel"         			"pugna_base_attack"						// Particle system model for projectile.
+"ProjectileSpeed"         			"900"									// Speed of projectile.
 
-		// Movement
-		//-------------------------------------------------------------------------------------------------------------
-		"MovementCapabilities"  	"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"175"									// Speed.
-		"MovementTurnRate"			"0.5"									// Turning rate.
-		"HasAggressiveStance"		"1"										// Plays alternate idle/run animation when near enemies
-		
-		"ParticleFile"				"particles/units/heroes/hero_pugna.pcf"
-		"GameSoundsFile"			"scripts/game_sounds_heroes/game_sounds_pugna.txt"
-		"VoiceFile"					"scripts/voscripts/game_sounds_vo_pugna.txt"
-		"HealthBarOffset"			"200"
-		"VisionNighttimeRange"		"800"
+// Movement
+//-------------------------------------------------------------------------------------------------------------
+"MovementCapabilities"    		"DOTA_UNIT_CAP_MOVE_GROUND"
+"MovementSpeed"           		"175"									// Speed.
+"MovementTurnRate"        		"0.5"									// Turning rate.
+"HasAggressiveStance"     		"1"										// Plays alternate idle/run animation when near enemies
 
-		"RenderablePortrait"
+"ParticleFile"            			"particles/units/heroes/hero_pugna.pcf"
+"GameSoundsFile"          		"scripts/game_sounds_heroes/game_sounds_pugna.txt"
+"VoiceFile"               			"scripts/voscripts/game_sounds_vo_pugna.txt"
+"HealthBarOffset"         			"200"
+"VisionNighttimeRange"    		"800"
+
+"RenderablePortrait"
+{
+	"Particles"
+	{
+		"pugna_loadout"
 		{
-			"Particles"
+			"0"
 			{
-				"pugna_loadout"
-				{
-					"0"
-					{
-						"type"		"follow_origin"
-						"location"		"attach_hitloc"
-					}
-					"1"
-					{
-						"type"		"follow_origin"
-						"position"		"150 150 150"
-					}
-				}
-				"pugna_weapon_glow"
-				{
-					"0"
-					{
-						"type"		"follow_attachment"
-						"location"	"attach_attack1"
-					}
-				}	
-				"pugna_ambient"
-				{
-					"0"
-					{
-						"type"		"follow_attachment"
-						"location"	"attach_belly"
-					}
-					"1"
-					{
-						"type"		"follow_attachment"
-						"location"	"attach_neck"
-					}
-				}	
+				"type"      			"follow_origin"
+				"location"  			"attach_hitloc"
+			}
+			"1"
+			{
+				"type"      			"follow_origin"
+				"position"  			"150 150 150"
+			}
+		}
+		"pugna_weapon_glow"
+		{
+			"0"
+			{
+				"type"      			"follow_attachment"
+				"location"  			"attach_attack1"
 			}
 		}	
-		
-		"StatusHealth"               "125"       // Здоровье.
-		"StatusHealthRegen"          "0"         // Регенерация в секунду.
-		"StatusMana"                 "2"         // Мана.
-		"StatusManaRegen"            "0"         // Регенерация маны в секунду.
-
-		"BoundsHullName"        	"DOTA_HULL_SIZE_HERO"
-	    "RingRadius"            	"70"
-
-	    "SelectionGroup"               "npc_dota_hero_zuus"              
-		"SelectOnSpawn"                "1"
-		"IgnoreAddSummonedToSelection" "0"
-
-	    // Creature Data
-        //----------------------------------------------------------------
-        "Creature"
-        {
-            "DisableClumpingBehavior"       "1"
-            "AttachWearables"
-            {
-                "Wearable1" { "ItemDef" "153" }
-                "Wearable2" { "ItemDef" "154" }
-                "Wearable3" { "ItemDef" "155" }
-                "Wearable4" { "ItemDef" "156" }
-                "Wearable5" { "ItemDef" "157" }
-                "Wearable6" { "ItemDef" "167" }
-                "Wearable7" { "ItemDef" "511" }
+		"pugna_ambient"
+		{
+			"0"
+			{
+				"type"      			"follow_attachment"
+				"location"  			"attach_belly"
 			}
-        }			
+			"1"
+			{
+				"type"      			"follow_attachment"
+				"location"  			"attach_neck"
+			}
+		}	
 	}
+}	
+
+"StatusHealth"       			"125"       // Здоровье.
+"StatusHealthRegen"  			"0"         // Регенерация в секунду.
+"StatusMana"       				"2"         // Мана.
+"StatusManaRegen"  			"0"         // Регенерация маны в секунду.
+
+"BoundsHullName"                	"DOTA_HULL_SIZE_HERO"
+	"RingRadius"                 			"70"
+
+	"SelectionGroup"             			"npc_dota_hero_zuus"              
+"SelectOnSpawn"                 			"1"
+"IgnoreAddSummonedToSelection"  			"0"
+
+// Creature Data
+//----------------------------------------------------------------
+"Creature"
+{
+    "DisableClumpingBehavior"       "1"
+    "AttachWearables"
+    {
+        "Wearable1" { "ItemDef" "153" }
+        "Wearable2" { "ItemDef" "154" }
+        "Wearable3" { "ItemDef" "155" }
+        "Wearable4" { "ItemDef" "156" }
+        "Wearable5" { "ItemDef" "157" }
+        "Wearable6" { "ItemDef" "167" }
+        "Wearable7" { "ItemDef" "511" }
+	}
+}}
 
 
 	"unit_innocent"
@@ -3486,4 +3485,116 @@
 	{
         	"Wearable1" { "ItemDef" "536" }
 	}
-}}}
+}}"unit_peon"{
+
+"BaseClass"               			"npc_dota_creature"
+"Ability1"                			"build_barrel"
+"Ability2"                			""
+"Ability3"                			""
+"Ability4"                			""
+"ArmorPhysical"           			"3"								
+
+"UnitLabel"					"builder"
+
+"Model"                   			"models/creeps/neutral_creeps/n_creep_troll_dark_a/n_creep_troll_dark_a.vmdl"		// Model.
+"Portrait"                			"vgui/hud/heroportraits/portrait_pugna"		// Small image for hero selection
+"IdleExpression"          			"scenes/pugna/pugna_exp_idle_01.vcd"		// custom facial animation idle
+"SoundSet"                			"Hero_Pugna"									// Name of sound set.
+"ModelScale"              			".74"
+"LoadoutScale"            			".85"
+"LastHitChallengeRival"   		"npc_dota_hero_viper"
+"HeroSelectSoundEffect"   		")weapons/hero/pugna/netherblast_precast.wav"
+
+// Attack
+//-------------------------------------------------------------------------------------------------------------
+"AttackCapabilities"      		"DOTA_UNIT_CAP_NO_ATTACK"
+"AttackDamageMin"         		"0"									// Damage range min.
+"AttackDamageMax"         		"0"									// Damage range max.
+"AttackRate"              			"1.7"									// Speed of attack.
+"AttackAnimationPoint"    		"0.5"									// Normalized time in animation cycle to attack.
+"AttackAcquisitionRange"  		"800"									// Range within a target can be acquired.
+"AttackRange"             			"600"									// Range within a target can be attacked.
+"ProjectileModel"         			"pugna_base_attack"						// Particle system model for projectile.
+"ProjectileSpeed"         			"900"									// Speed of projectile.
+
+// Movement
+//-------------------------------------------------------------------------------------------------------------
+"MovementCapabilities"    		"DOTA_UNIT_CAP_MOVE_GROUND"
+"MovementSpeed"           		"175"									// Speed.
+"MovementTurnRate"        		"0.6"									// Turning rate.
+"HasAggressiveStance"     		"0"										// Plays alternate idle/run animation when near enemies
+
+"ParticleFile"            			"particles/units/heroes/hero_pugna.pcf"
+"GameSoundsFile"          		"scripts/game_sounds_heroes/game_sounds_pugna.txt"
+"VoiceFile"               			"scripts/voscripts/game_sounds_vo_pugna.txt"
+"HealthBarOffset"         			"200"
+"VisionNighttimeRange"    		"800"
+
+"RenderablePortrait"
+{
+}	
+
+"StatusHealth"       			"67"       // Здоровье.
+"StatusHealthRegen"  			"0"         // Регенерация в секунду.
+"StatusMana"       				"15"         // Мана.
+"StatusManaRegen"  			"0"         // Регенерация маны в секунду.
+
+"BoundsHullName"                	"DOTA_HULL_SIZE_HERO"
+"RingRadius"                 			"70"
+
+"SelectionGroup"             			"npc_dota_hero_zuus"              
+"SelectOnSpawn"                 			"1"
+"IgnoreAddSummonedToSelection"  			"0"
+
+// Creature Data
+//----------------------------------------------------------------
+"Creature"
+{
+    "DisableClumpingBehavior"       "1"
+}}//@ #Folder="Other"
+"building_barrel"{
+
+"BaseClass"               			"npc_dota_creature"
+"Ability1"                			""
+"Ability2"                			""
+"Ability3"                			""
+"Ability4"                			""
+"ArmorPhysical"           			"-1"
+
+"Model"                   			"models/props_debris/barrel001a.vmdl"		// Model.
+"ModelScale"              			"1.3"
+"LoadoutScale"            			".95"
+
+// Attack
+//-------------------------------------------------------------------------------------------------------------
+"AttackCapabilities"      		"DOTA_UNIT_CAP_NO_ATTACK"
+"AttackDamageMin"         		"0"									// Damage range min.
+"AttackDamageMax"         		"0"									// Damage range max.
+"AttackRate"              			"1.7"									// Speed of attack.
+"AttackAnimationPoint"    		"0.5"									// Normalized time in animation cycle to attack.
+"AttackAcquisitionRange"  		"600"									// Range within a target can be acquired.
+"AttackRange"             			"128"									// Range within a target can be attacked.
+"ProjectileModel"         			""										// Particle system model for projectile.
+"ProjectileSpeed"         			""										// Speed of projectile.
+
+// Movement
+//-------------------------------------------------------------------------------------------------------------
+"MovementCapabilities"    		"DOTA_UNIT_CAP_MOVE_NONE"
+"MovementSpeed"           		"0"									// Speed.
+"MovementTurnRate"        		"1.0"									// Turning rate.
+"HasAggressiveStance"     		"0"										// Plays alternate idle/run animation when near enemies
+
+"HealthBarOffset"         			"150"
+"VisionNighttimeRange"    		"200"
+
+"StatusHealth"            			"100"        // Здоровье.
+"StatusHealthRegen"       		"0"         // Регенерация в секунду.
+"StatusMana"              			"0"         // Мана.
+"StatusManaRegen"         		"0"         // Регенерация маны в секунду.
+
+"BoundsHullName"          		"DOTA_HULL_SIZE_HUGE"
+"RingRadius"              			"100"
+
+"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"}}
